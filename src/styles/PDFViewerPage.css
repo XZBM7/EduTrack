@@ -1,0 +1,157 @@
+/* التنسيقات العامة */
+.pdf-viewer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Tahoma', 'Arial', sans-serif;
+  direction: rtl;
+}
+
+.page-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  border-radius: 2px;
+}
+
+/* محتوى PDF */
+.pdf-content {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.pdf-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+/* عناصر التحكم */
+.pdf-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  direction: ltr;
+}
+
+.control-button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.control-button:hover {
+  background-color: #2980b9;
+}
+
+.control-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.page-info {
+  margin: 0 1rem;
+  font-weight: 500;
+  color: #7f8c8d;
+}
+
+.download-button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #2ecc71;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-right: auto;
+}
+
+.download-button:hover {
+  background-color: #27ae60;
+}
+
+/* حاوية المستند */
+.pdf-document-container {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: auto;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+/* حالة عدم وجود محتوى */
+.no-content {
+  text-align: center;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin: 2rem 0;
+  border: 2px dashed #dee2e6;
+}
+
+.no-content-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.no-content h2 {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.no-content p {
+  color: #adb5bd;
+}
+
+.loading-message,
+.error-message {
+  padding: 2rem;
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.error-message {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .pdf-controls {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .download-button {
+    margin-right: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .page-title {
+    font-size: 1.6rem;
+  }
+}

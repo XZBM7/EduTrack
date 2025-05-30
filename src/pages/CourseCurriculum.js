@@ -1,0 +1,116 @@
+import React, { useState, useEffect } from 'react';
+import '../styles/CourseCurriculum.css';
+
+const CourseCurriculum = () => {
+  const [completedLectures, setCompletedLectures] = useState([]);
+
+  useEffect(() => {
+    const savedProgress = localStorage.getItem('completedLectures');
+    if (savedProgress) {
+      setCompletedLectures(JSON.parse(savedProgress));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('completedLectures', JSON.stringify(completedLectures));
+  }, [completedLectures]);
+
+  const toggleLectureCompletion = (lectureId) => {
+    setCompletedLectures(prev => {
+      if (prev.includes(lectureId)) {
+        return prev.filter(id => id !== lectureId);
+      } else {
+        return [...prev, lectureId];
+      }
+    });
+  };
+
+  const curriculumSections = [
+    {
+      title: "Introduction & Big Data Basics",
+      lectures: [
+        { id: 'lec1', title: "Lecture 1: Intro to Software & Big Data" },
+        { id: 'lec2', title: "Lecture 2: NoSQL Types - MongoDB with Python" }
+      ]
+    },
+    {
+      title: "Software Engineering & Architecture",
+      lectures: [
+        { id: 'lec3', title: "Lecture 3: Clean Code + SOLID Principles" },
+        { id: 'lec4', title: "Lecture 4: Microservices Fundamentals" },
+        { id: 'lec5', title: "Lecture 5: Microservices Design Patterns" },
+        { id: 'lec6', title: "Lecture 6: Microservices Design Patterns - Part 2" }
+      ]
+    },
+    {
+      title: "Modeling & OOP Concepts",
+      lectures: [
+        { id: 'lec7', title: "Lecture 7: OCL + UML Modeling" },
+        { id: 'lec8', title: "Lecture 8: AOP + OOP Principles" }
+      ]
+    },
+    {
+      title: "Testing & Frontend Development",
+      lectures: [
+        { id: 'lec9', title: "Lecture 9: Software Testing (Manual Testing)" },
+        { id: 'lec10', title: "Lecture 10: React.js - Next.js & API Integration" }
+      ]
+    },
+    {
+      title: "Advanced Topics",
+      lectures: [
+        { id: 'lec11', title: "Lecture 11: Classification & Regression" }
+      ]
+    }
+  ];
+
+  return (
+    <div className="curriculum-container">
+      <h1 className="course-title">Software Engineering Master Course</h1>
+      <p className="course-description">Complete curriculum with progress tracking</p>
+      
+      <div className="progress-bar">
+        <div 
+          className="progress-fill"
+          style={{
+            width: `${(completedLectures.length / 11) * 100}%`
+          }}
+        ></div>
+        <span className="progress-text">
+          {completedLectures.length} of 11 lectures completed ({Math.round((completedLectures.length / 11) * 100)}%)
+        </span>
+      </div>
+
+      <div className="sections-container">
+        {curriculumSections.map((section, sectionIndex) => (
+          <div key={sectionIndex} className="curriculum-section">
+            <h2 className="section-title">{section.title}</h2>
+            <div className="lectures-list">
+              {section.lectures.map((lecture, lectureIndex) => (
+                <div 
+                  key={lecture.id} 
+                  className={`lecture-item ${completedLectures.includes(lecture.id) ? 'completed' : ''}`}
+                  onClick={() => toggleLectureCompletion(lecture.id)}
+                >
+                  <div className="lecture-checkbox">
+                    {completedLectures.includes(lecture.id) ? (
+                      <span className="checkmark">✓</span>
+                    ) : (
+                      <span className="checkbox"></span>
+                    )}
+                  </div>
+                  <span className="lecture-title">{lecture.title}</span>
+                  <span className="lecture-status">
+                    {completedLectures.includes(lecture.id) ? 'Completed' : 'Pending'}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CourseCurriculum;

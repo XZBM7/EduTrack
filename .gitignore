@@ -1,0 +1,22 @@
+# تجاهل مجلدات الباكيجات والبناء
+node_modules/
+node/
+nextapp/
+react/
+build/
+dist/
+.next/
+out/
+
+# بيئة العمل
+.env
+.env.local
+
+# نظام التشغيل
+.DS_Store
+Thumbs.db
+
+# ملفات اللوج والسجل
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,154 @@
+.curriculum-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.course-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.course-description {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.curriculum-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.section-title {
+  background: linear-gradient(135deg, #3498db, #9b59b6);
+  color: white;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.lectures-list {
+  padding: 1rem;
+}
+
+.lecture-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lecture-item:last-child {
+  border-bottom: none;
+}
+
+.lecture-item:hover {
+  background-color: #f8f9fa;
+}
+
+.lecture-item.completed {
+  background-color: #f8f9fa;
+}
+
+.lecture-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bdc3c7;
+  border-radius: 4px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.lecture-item.completed .lecture-checkbox {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+.checkmark {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.lecture-title {
+  flex: 1;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.lecture-item.completed .lecture-title {
+  color: #7f8c8d;
+  text-decoration: line-through;
+}
+
+.lecture-status {
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+}
+
+.lecture-item.completed .lecture-status {
+  background-color: #d5f5e3;
+  color: #27ae60;
+}
+
+@media (max-width: 600px) {
+  .curriculum-container {
+    padding: 1rem;
+  }
+  
+  .lecture-item {
+    flex-wrap: wrap;
+  }
+  
+  .lecture-status {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
+}

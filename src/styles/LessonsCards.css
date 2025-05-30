@@ -1,0 +1,156 @@
+/* Main Container */
+.lessons-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  border-radius: 2px;
+}
+
+/* No Content Styling */
+.no-content {
+  text-align: center;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin: 2rem 0;
+  border: 2px dashed #dee2e6;
+}
+
+.no-content-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.no-content h2 {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.no-content p {
+  color: #adb5bd;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Lesson Card */
+.lesson-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.lesson-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #3498db, #9b59b6);
+  padding: 1.5rem;
+  color: white;
+}
+
+.lesson-title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+  min-height: 120px;
+}
+
+.lesson-description {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.video-link, .pdf-link {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.video-link {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.video-link:hover {
+  background-color: #c0392b;
+}
+
+.pdf-link {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.pdf-link:hover {
+  background-color: #27ae60;
+}
+
+.card-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 50px 0;
+  border-color: transparent #2c3e50 transparent transparent;
+  transition: all 0.3s ease;
+}
+
+.lesson-card:hover .card-corner {
+  border-width: 0 60px 60px 0;
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+}
