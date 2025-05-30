@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/EduTrack/static/css/main.1d293a9b.css",
+    "main.js": "/EduTrack/static/js/main.726e8344.js",
+    "static/css/5.69c0369d.chunk.css": "/EduTrack/static/css/5.69c0369d.chunk.css",
+    "static/js/5.dbfe86c6.chunk.js": "/EduTrack/static/js/5.dbfe86c6.chunk.js",
+    "static/css/402.6bad05e1.chunk.css": "/EduTrack/static/css/402.6bad05e1.chunk.css",
+    "static/js/402.699749c3.chunk.js": "/EduTrack/static/js/402.699749c3.chunk.js",
+    "static/js/407.47813bb6.chunk.js": "/EduTrack/static/js/407.47813bb6.chunk.js",
+    "static/css/383.0dcb93e9.chunk.css": "/EduTrack/static/css/383.0dcb93e9.chunk.css",
+    "static/js/383.b4799680.chunk.js": "/EduTrack/static/js/383.b4799680.chunk.js",
+    "static/css/264.b48a705f.chunk.css": "/EduTrack/static/css/264.b48a705f.chunk.css",
+    "static/js/264.757e4b28.chunk.js": "/EduTrack/static/js/264.757e4b28.chunk.js",
+    "static/css/689.416daf07.chunk.css": "/EduTrack/static/css/689.416daf07.chunk.css",
+    "static/js/689.83f1fde5.chunk.js": "/EduTrack/static/js/689.83f1fde5.chunk.js",
+    "static/js/835.0b3668ad.chunk.js": "/EduTrack/static/js/835.0b3668ad.chunk.js",
+    "index.html": "/EduTrack/index.html",
+    "main.1d293a9b.css.map": "/EduTrack/static/css/main.1d293a9b.css.map",
+    "main.726e8344.js.map": "/EduTrack/static/js/main.726e8344.js.map",
+    "5.69c0369d.chunk.css.map": "/EduTrack/static/css/5.69c0369d.chunk.css.map",
+    "5.dbfe86c6.chunk.js.map": "/EduTrack/static/js/5.dbfe86c6.chunk.js.map",
+    "402.6bad05e1.chunk.css.map": "/EduTrack/static/css/402.6bad05e1.chunk.css.map",
+    "402.699749c3.chunk.js.map": "/EduTrack/static/js/402.699749c3.chunk.js.map",
+    "407.47813bb6.chunk.js.map": "/EduTrack/static/js/407.47813bb6.chunk.js.map",
+    "383.0dcb93e9.chunk.css.map": "/EduTrack/static/css/383.0dcb93e9.chunk.css.map",
+    "383.b4799680.chunk.js.map": "/EduTrack/static/js/383.b4799680.chunk.js.map",
+    "264.b48a705f.chunk.css.map": "/EduTrack/static/css/264.b48a705f.chunk.css.map",
+    "264.757e4b28.chunk.js.map": "/EduTrack/static/js/264.757e4b28.chunk.js.map",
+    "689.416daf07.chunk.css.map": "/EduTrack/static/css/689.416daf07.chunk.css.map",
+    "689.83f1fde5.chunk.js.map": "/EduTrack/static/js/689.83f1fde5.chunk.js.map",
+    "835.0b3668ad.chunk.js.map": "/EduTrack/static/js/835.0b3668ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d293a9b.css",
+    "static/js/main.726e8344.js"
+  ]
+}
