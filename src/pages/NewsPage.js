@@ -3,14 +3,14 @@ import '../styles/NewsPage.css';
 
 const NewsPage = () => {
   const [news, setNews] = useState([
-    // {
-    //   id: 1,
-    //   title: "Campus Reopening Announcement",
-    //   content: "The university will reopen on September 5th with full safety measures in place.",
-    //   date: "2023-08-20",
-    //   author: "Administration Office",
-    //   isImportant: true
-    // },
+    {
+      id: 1,
+      title: "The start of course",
+      content: "The course will start from 2025-06-15 to 2025-07-15, with 3 sessions per week, held online or offline via YouTube",
+      date: "2025-5-31",
+      author: "XZ",
+      isImportant: true
+    },
     // {
     //   id: 2,
     //   title: "Scholarship Applications Open",

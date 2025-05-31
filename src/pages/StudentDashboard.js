@@ -19,7 +19,7 @@ const StudentDashboard = () => {
         setStats({
           totalLectures: 11,
           completedLectures: 0,
-          remainingLectures: 0,
+          remainingLectures: 11,
           canceledLectures: 0,
           upcomingLectures: 0,
           assignmentsDue: 0,
@@ -74,7 +74,7 @@ const StudentDashboard = () => {
           <div className="stat-content">
             <h3>Upcoming Lectures</h3>
             <p className="stat-value">{stats.upcomingLectures} this week</p>
-            <p className="stat-change">Next: Soon</p>
+            <p className="stat-change">Next:  6/15/2025</p>
           </div>
         </div>
 
@@ -106,8 +106,8 @@ const StudentDashboard = () => {
             </div>
           </div>
           <div className="course-syllabus">
-            <h4>Current Topic: Soon</h4>
-            <p>Next: Soon</p>
+            <h4>Current Topic: Intro to Software & Big data</h4>
+            <p>Next: 6/15/2025</p>
           </div>
         </section>
 

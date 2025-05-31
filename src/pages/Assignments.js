@@ -12,7 +12,115 @@ const Assignments = () => {
   const [userAnswers, setUserAnswers] = useState([]);
 
   const assignments = [
-  ];
+  {
+    id: 1,
+    title: "Intro to Software Quiz",
+    description: "A basic quiz covering software concepts.",
+    questions: [
+      {
+        question: "What does 'software' refer to?",
+        options: [
+          "The physical parts of a computer",
+          "The people who use computers",
+          "The programs and operating systems used by a computer",
+          "The electricity powering a computer"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which of the following is an example of system software?",
+        options: [
+          "Microsoft Word",
+          "Windows 10",
+          "Google Chrome",
+          "Adobe Photoshop"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "Which programming language is commonly used for web development?",
+        options: [
+          "HTML",
+          "Python",
+          "C++",
+          "Java"
+        ],
+        correctAnswer: 0
+      },
+      {
+        question: "What is the purpose of an operating system?",
+        options: [
+          "To design hardware",
+          "To connect to the internet",
+          "To manage hardware and software resources",
+          "To create websites"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What is a bug in software?",
+        options: [
+          "A computer virus",
+          "An unwanted feature",
+          "An error in the code",
+          "A user manual"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which of the following is open-source software?",
+        options: [
+          "Microsoft Office",
+          "Adobe Photoshop",
+          "Linux",
+          "Google Docs"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What is the main role of a software developer?",
+        options: [
+          "To repair computer hardware",
+          "To write and maintain code",
+          "To design websites only",
+          "To sell computer parts"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "Which one of these is a programming language?",
+        options: [
+          "Google",
+          "Excel",
+          "Python",
+          "Facebook"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What do you call a visual interface where you can click icons and use windows?",
+        options: [
+          "Command line",
+          "Text editor",
+          "Graphical User Interface (GUI)",
+          "Processor"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which tool is commonly used to write and edit code?",
+        options: [
+          "Paint",
+          "WordPad",
+          "Visual Studio Code",
+          "Chrome"
+        ],
+        correctAnswer: 2
+      }
+    ]
+  }
+];
+
 
   const startTest = (testId) => {
     setActiveTest(testId);
