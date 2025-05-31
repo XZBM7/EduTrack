@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import SplashScreen from './pages/SplashScreen';
 import NewsPage from './pages/NewsPage';
 import ContactPage from './pages/ContactPage';
 import OldLessonsCards from './pages/OldLessonsCards';
@@ -15,11 +14,6 @@ import CourseCurriculum from './pages/CourseCurriculum';
 import SessionDashboard from './pages/SessionDashboard';
 
 function App() {
-  // const [showSplash, setShowSplash] = useState(true);
-
-  // if (showSplash) {
-  //   return <SplashScreen onFinish={() => setShowSplash(false)} />;
-  // }
 
   return (
     <div className="app">
