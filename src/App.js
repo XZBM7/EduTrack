@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import React, { useState, Suspense } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SplashScreen from './pages/SplashScreen';
@@ -7,13 +7,12 @@ import NewsPage from './pages/NewsPage';
 import ContactPage from './pages/ContactPage';
 import OldLessonsCards from './pages/OldLessonsCards';
 
-const StudentDashboard = React.lazy(() => import('./pages/StudentDashboard'));
-const Assignments = React.lazy(() => import('./pages/Assignments'));
-const LessonsCards = React.lazy(() => import('./pages/LessonsCards'));
-const PDFViewerPage = React.lazy(() => import('./pages/PDFViewerPage'));
-const CourseCurriculum = React.lazy(() => import('./pages/CourseCurriculum'));
-const SessionDashboard = React.lazy(() => import('./pages/SessionDashboard'));
-
+import StudentDashboard from './pages/StudentDashboard';
+import Assignments from './pages/Assignments';
+import LessonsCards from './pages/LessonsCards';
+import PDFViewerPage from './pages/PDFViewerPage';
+import CourseCurriculum from './pages/CourseCurriculum';
+import SessionDashboard from './pages/SessionDashboard';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -27,23 +26,18 @@ function App() {
       <Navbar />
 
       <main className="main-content">
-        <Suspense fallback={<div>Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<StudentDashboard />} />
-            <Route path="/dashboard" element={<StudentDashboard />} />
-            <Route path="/Assignments" element={<Assignments />} />
-            <Route path="/LessonsCards" element={<LessonsCards />} />
-            <Route path="/PDFViewerPage" element={<PDFViewerPage />} />
-            <Route path="/CourseCurriculum" element={<CourseCurriculum />} />
-            <Route path="/SessionDashboard" element={<SessionDashboard />} />
-            <Route path="/NewsPage" element={<NewsPage />} />
-            <Route path="/ContactPage" element={<ContactPage />} />
-            <Route path="/OldLessonsCards" element={<OldLessonsCards />} />
-
-
-
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<StudentDashboard />} />
+          <Route path="/dashboard" element={<StudentDashboard />} />
+          <Route path="/Assignments" element={<Assignments />} />
+          <Route path="/LessonsCards" element={<LessonsCards />} />
+          <Route path="/PDFViewerPage" element={<PDFViewerPage />} />
+          <Route path="/CourseCurriculum" element={<CourseCurriculum />} />
+          <Route path="/SessionDashboard" element={<SessionDashboard />} />
+          <Route path="/NewsPage" element={<NewsPage />} />
+          <Route path="/ContactPage" element={<ContactPage />} />
+          <Route path="/OldLessonsCards" element={<OldLessonsCards />} />
+        </Routes>
       </main>
 
       <Footer />
