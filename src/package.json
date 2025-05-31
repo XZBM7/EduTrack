@@ -11,6 +11,7 @@
   "test": "react-scripts test",
   "eject": "react-scripts eject",
   "predeploy": "npm run build",
+  "postbuild": "copy public/404.html build/404.html",
   "deploy": "gh-pages -d build"
 },
 
