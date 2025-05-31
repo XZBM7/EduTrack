@@ -1,82 +1,99 @@
 .curriculum-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 .course-title {
   text-align: center;
   color: #2c3e50;
   margin-bottom: 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .course-description {
   text-align: center;
   color: #7f8c8d;
   margin-bottom: 2rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.progress-container {
+  margin: 1.5rem 0;
+  width: 100%;
 }
 
 .progress-bar {
-  width: 100%;
-  height: 20px;
+  height: 12px;
   background-color: #ecf0f1;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  position: relative;
+  border-radius: 6px;
   overflow: hidden;
+  margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #3498db, #9b59b6);
-  border-radius: 10px;
-  transition: width 0.3s ease;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 0.8rem;
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.progress-percentage {
   font-weight: bold;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  color: #2c3e50;
+}
+
+.progress-count {
+  color: #7f8c8d;
 }
 
 .sections-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .curriculum-section {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.curriculum-section:hover {
+  transform: translateY(-3px);
 }
 
 .section-title {
   background: linear-gradient(135deg, #3498db, #9b59b6);
   color: white;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .lectures-list {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .lecture-item {
   display: flex;
   align-items: center;
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid #eee;
+  padding: 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
   cursor: pointer;
   transition: all 0.2s ease;
+  position: relative;
 }
 
 .lecture-item:last-child {
@@ -84,7 +101,7 @@
 }
 
 .lecture-item:hover {
-  background-color: #f8f9fa;
+  background-color: #f8fafb;
 }
 
 .lecture-item.completed {
@@ -92,31 +109,59 @@
 }
 
 .lecture-checkbox {
+  position: relative;
   width: 20px;
   height: 20px;
+  margin-right: 0.8rem;
+}
+
+.lecture-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
   border: 2px solid #bdc3c7;
   border-radius: 4px;
-  margin-right: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: all 0.2s ease;
 }
 
-.lecture-item.completed .lecture-checkbox {
+.lecture-checkbox input:checked ~ .custom-checkbox {
   background-color: #2ecc71;
   border-color: #2ecc71;
 }
 
-.checkmark {
+.lecture-checkbox input:checked ~ .custom-checkbox::after {
+  content: '✓';
+  position: absolute;
   color: white;
-  font-size: 0.9rem;
+  font-size: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lecture-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .lecture-title {
-  flex: 1;
   color: #2c3e50;
   font-weight: 500;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  line-height: 1.3;
 }
 
 .lecture-item.completed .lecture-title {
@@ -125,10 +170,11 @@
 }
 
 .lecture-status {
-  padding: 0.3rem 0.6rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 12px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
+  align-self: flex-start;
   background-color: #ecf0f1;
   color: #7f8c8d;
 }
@@ -138,17 +184,66 @@
   color: #27ae60;
 }
 
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading-spinner::after {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #ddd;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 @media (max-width: 600px) {
   .curriculum-container {
     padding: 1rem;
   }
   
   .lecture-item {
-    flex-wrap: wrap;
+    padding: 0.7rem;
+    flex-wrap: nowrap;
+  }
+  
+  .lecture-checkbox {
+    margin-right: 0.6rem;
   }
   
   .lecture-status {
-    margin-top: 0.5rem;
-    margin-left: 2rem;
+    margin-left: auto;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .lecture-details {
+    min-width: 0;
+  }
+  
+  .lecture-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .progress-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
   }
 }

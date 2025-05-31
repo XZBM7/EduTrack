@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/Assignments.css'; 
+import '../styles/Assignments.css';
+import { FaClipboardList } from 'react-icons/fa';
 
 const Assignments = () => {
   const [activeTest, setActiveTest] = useState(null);
@@ -37,17 +38,17 @@ const Assignments = () => {
   const nextQuestion = () => {
     const currentTest = assignments.find(a => a.id === activeTest);
     const isCorrect = selectedOption === currentTest.questions[currentQuestion].correctAnswer;
-    
-    setUserAnswers([...userAnswers, { 
-      questionIndex: currentQuestion, 
-      selectedOption, 
-      isCorrect 
+
+    setUserAnswers([...userAnswers, {
+      questionIndex: currentQuestion,
+      selectedOption,
+      isCorrect
     }]);
-    
+
     if (isCorrect) {
       setScore(score + 1);
     }
-    
+
     if (currentQuestion < currentTest.questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedOption(null);
@@ -76,14 +77,14 @@ const Assignments = () => {
     const currentTest = getCurrentTest();
     const question = currentTest.questions[questionIndex];
     const userAnswer = userAnswers.find(a => a.questionIndex === questionIndex);
-    
+
     return (
       <div className="assignment-question">
         <h3>{question.question}</h3>
         <div className="assignment-options">
           {question.options.map((option, index) => {
             let optionClass = "assignment-option";
-            
+
             if (userAnswer) {
               if (index === question.correctAnswer) {
                 optionClass += " assignment-correct";
@@ -91,7 +92,7 @@ const Assignments = () => {
                 optionClass += " assignment-incorrect";
               }
             }
-            
+
             return (
               <div
                 key={index}
@@ -108,16 +109,16 @@ const Assignments = () => {
 
   return (
     <div className="assignments-app">
-      <h1>School Assignments</h1>
-      
+      <h1> Assignments</h1>
+
       {assignments.length > 0 ? (
         <div className="assignments-cards-container">
           {assignments.map(assignment => (
             <div key={assignment.id} className="assignment-card">
               <h2>{assignment.title}</h2>
               <p>{assignment.description}</p>
-              <button 
-                className="assignment-test-btn" 
+              <button
+                className="assignment-test-btn"
                 onClick={() => startTest(assignment.id)}
               >
                 Take Test
@@ -127,7 +128,9 @@ const Assignments = () => {
         </div>
       ) : (
         <div className="assignment-no-assignments">
-          <p>No assignments available</p>
+          <FaClipboardList className="assignment-empty-icon" />
+          <p>No assignments available at the moment</p>
+          <p className="assignment-empty-subtext">Check back later for new assignments</p>
         </div>
       )}
 
@@ -135,13 +138,13 @@ const Assignments = () => {
         <div className="assignment-test-modal">
           <div className="assignment-test-content">
             <span className="assignment-close-btn" onClick={closeTest}>&times;</span>
-            
+
             {!showResult ? (
               <>
                 <div className="assignment-progress">
                   Question {currentQuestion + 1} of {getCurrentTest().questions.length}
                 </div>
-                
+
                 <div className="assignment-question active">
                   <h3>{getCurrentTest().questions[currentQuestion].question}</h3>
                   <div className="assignment-options">
@@ -156,16 +159,16 @@ const Assignments = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="assignment-navigation">
-                  <button 
-                    className="assignment-nav-btn" 
+                  <button
+                    className="assignment-nav-btn"
                     onClick={prevQuestion}
                     disabled={currentQuestion === 0}
                   >
                     Previous
                   </button>
-                  
+
                   <button
                     className={`assignment-nav-btn ${currentQuestion === getCurrentTest().questions.length - 1 ? 'assignment-submit-btn' : ''}`}
                     onClick={nextQuestion}
@@ -184,7 +187,7 @@ const Assignments = () => {
                 <div className="assignment-attempts">
                   Number of attempts: {attempts[activeTest] || 1}
                 </div>
-                
+
                 <div className="assignment-questions-review">
                   <h3>Review your answers:</h3>
                   {getCurrentTest().questions.map((_, index) => (
@@ -193,7 +196,7 @@ const Assignments = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <button className="assignment-restart-btn" onClick={restartTest}>
                   Retake Test
                 </button>

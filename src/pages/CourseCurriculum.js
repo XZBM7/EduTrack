@@ -1,29 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/CourseCurriculum.css';
 
 const CourseCurriculum = () => {
   const [completedLectures, setCompletedLectures] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
+  // Load from localStorage on component mount
   useEffect(() => {
-    const savedProgress = localStorage.getItem('completedLectures');
-    if (savedProgress) {
-      setCompletedLectures(JSON.parse(savedProgress));
-    }
+    const loadProgress = () => {
+      try {
+        const savedProgress = localStorage.getItem('completedLectures');
+        if (savedProgress) {
+          const parsed = JSON.parse(savedProgress);
+          if (Array.isArray(parsed)) {
+            setCompletedLectures(parsed);
+          }
+        }
+      } catch (error) {
+        console.error('Error loading progress:', error);
+      } finally {
+        setIsLoaded(true);
+      }
+    };
+
+    loadProgress();
+    
+    // Add event listener for storage changes
+    const handleStorageChange = (e) => {
+      if (e.key === 'completedLectures') {
+        loadProgress();
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
+  // Save to localStorage when completedLectures changes
   useEffect(() => {
-    localStorage.setItem('completedLectures', JSON.stringify(completedLectures));
-  }, [completedLectures]);
+    if (isLoaded) {
+      localStorage.setItem('completedLectures', JSON.stringify(completedLectures));
+    }
+  }, [completedLectures, isLoaded]);
 
-  const toggleLectureCompletion = (lectureId) => {
+  const toggleLectureCompletion = useCallback((lectureId) => {
     setCompletedLectures(prev => {
-      if (prev.includes(lectureId)) {
-        return prev.filter(id => id !== lectureId);
-      } else {
-        return [...prev, lectureId];
-      }
+      const newState = prev.includes(lectureId)
+        ? prev.filter(id => id !== lectureId)
+        : [...prev, lectureId];
+      return newState;
     });
-  };
+  }, []);
 
   const curriculumSections = [
     {
@@ -64,45 +91,66 @@ const CourseCurriculum = () => {
     }
   ];
 
+  if (!isLoaded) {
+    return (
+      <div className="curriculum-container">
+        <div className="loading-spinner">Loading...</div>
+      </div>
+    );
+  }
+
+  const totalLectures = 11;
+  const completedCount = completedLectures.length;
+  const completionPercentage = Math.round((completedCount / totalLectures) * 100);
+
   return (
     <div className="curriculum-container">
       <h1 className="course-title">Software Engineering Master Course</h1>
       <p className="course-description">Complete curriculum with progress tracking</p>
       
-      <div className="progress-bar">
-        <div 
-          className="progress-fill"
-          style={{
-            width: `${(completedLectures.length / 11) * 100}%`
-          }}
-        ></div>
-        <span className="progress-text">
-          {completedLectures.length} of 11 lectures completed ({Math.round((completedLectures.length / 11) * 100)}%)
-        </span>
+      <div className="progress-container">
+        <div className="progress-bar">
+          <div 
+            className="progress-fill"
+            style={{
+              width: `${completionPercentage}%`,
+              transition: 'width 0.4s ease'
+            }}
+          />
+        </div>
+        <div className="progress-info">
+          <span className="progress-percentage">{completionPercentage}%</span>
+          <span className="progress-count">
+            ({completedCount} of {totalLectures} completed)
+          </span>
+        </div>
       </div>
 
       <div className="sections-container">
         {curriculumSections.map((section, sectionIndex) => (
-          <div key={sectionIndex} className="curriculum-section">
+          <div key={`section-${sectionIndex}`} className="curriculum-section">
             <h2 className="section-title">{section.title}</h2>
             <div className="lectures-list">
-              {section.lectures.map((lecture, lectureIndex) => (
+              {section.lectures.map((lecture) => (
                 <div 
-                  key={lecture.id} 
+                  key={lecture.id}
                   className={`lecture-item ${completedLectures.includes(lecture.id) ? 'completed' : ''}`}
                   onClick={() => toggleLectureCompletion(lecture.id)}
                 >
                   <div className="lecture-checkbox">
-                    {completedLectures.includes(lecture.id) ? (
-                      <span className="checkmark">✓</span>
-                    ) : (
-                      <span className="checkbox"></span>
-                    )}
+                    <input
+                      type="checkbox"
+                      checked={completedLectures.includes(lecture.id)}
+                      readOnly
+                    />
+                    <span className="custom-checkbox"></span>
                   </div>
-                  <span className="lecture-title">{lecture.title}</span>
-                  <span className="lecture-status">
-                    {completedLectures.includes(lecture.id) ? 'Completed' : 'Pending'}
-                  </span>
+                  <div className="lecture-details">
+                    <span className="lecture-title">{lecture.title}</span>
+                    <span className="lecture-status">
+                      {completedLectures.includes(lecture.id) ? '✓ Completed' : '○ Pending'}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
