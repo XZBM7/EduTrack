@@ -358,3 +358,123 @@
     font-size: 3rem;
   }
 }
+/* Timer Styles */
+.assignment-timer {
+  background: #f8f9fa;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Test Mode Selection */
+.assignment-test-mode-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.assignment-test-mode-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+}
+
+.test-mode-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.test-mode-card {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.test-mode-card:hover {
+  border-color: #4a90e2;
+}
+
+.test-mode-card.selected {
+  border-color: #4a90e2;
+  background: #f0f7ff;
+}
+
+.test-mode-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.test-mode-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.test-mode-btn {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.test-mode-btn:hover {
+  background: #3a7bc8;
+}
+
+.time-selection {
+  margin: 15px 0;
+}
+
+.time-selection label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.time-selection select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Time Used in Results */
+.assignment-time-used {
+  margin: 10px 0;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .test-mode-options {
+    flex-direction: column;
+  }
+  
+  .test-mode-card {
+    min-width: auto;
+  }
+}

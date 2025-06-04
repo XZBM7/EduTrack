@@ -6,6 +6,7 @@ import NewsPage from './pages/NewsPage';
 import ContactPage from './pages/ContactPage';
 import OldLessonsCards from './pages/OldLessonsCards';
 
+
 import StudentDashboard from './pages/StudentDashboard';
 import Assignments from './pages/Assignments';
 import LessonsCards from './pages/LessonsCards';
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+
 
       <main className="main-content">
         <Routes>

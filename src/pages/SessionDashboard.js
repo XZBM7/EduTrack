@@ -1,15 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/SessionDashboard.css";
 import { sessionData } from "./SessionData";
 
 const SessionDashboard = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState("all"); // 'all', 'active', 'completed', 'cancelled', 'upcoming'
+
+  const filteredSessions = sessionData.filter((session) => {
+    // Search filtering
+    const matchesSearch = session.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                         session.time.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         session.date.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    // Status filtering
+    const matchesStatus = statusFilter === "all" || session.status === statusFilter;
+
+    return matchesSearch && matchesStatus;
+  });
+
   return (
     <div className="session-dashboard">
       <h2 className="dashboard-title">Session Status</h2>
       
-      {sessionData.length > 0 ? (
+      {/* Search and Filter Bar */}
+      <div className="dashboard-controls">
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search sessions..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+          <span className="search-icon">🔍</span>
+        </div>
+        
+        <div className="status-filters">
+          <button 
+            className={`status-btn ${statusFilter === 'all' ? 'active' : ''}`}
+            onClick={() => setStatusFilter('all')}
+          >
+            All
+          </button>
+          <button 
+            className={`status-btn ${statusFilter === 'active' ? 'active' : ''}`}
+            onClick={() => setStatusFilter('active')}
+          >
+            Live Now
+          </button>
+          <button 
+            className={`status-btn ${statusFilter === 'upcoming' ? 'active' : ''}`}
+            onClick={() => setStatusFilter('upcoming')}
+          >
+            Upcoming
+          </button>
+          <button 
+            className={`status-btn ${statusFilter === 'completed' ? 'active' : ''}`}
+            onClick={() => setStatusFilter('completed')}
+          >
+            Completed
+          </button>
+          <button 
+            className={`status-btn ${statusFilter === 'cancelled' ? 'active' : ''}`}
+            onClick={() => setStatusFilter('cancelled')}
+          >
+            Cancelled
+          </button>
+        </div>
+      </div>
+
+      {filteredSessions.length > 0 ? (
         <div className="sessions-grid">
-          {sessionData.map((session) => (
+          {filteredSessions.map((session) => (
             <div 
               key={session.id} 
               className={`session-card ${session.status}`}
@@ -19,7 +81,11 @@ const SessionDashboard = () => {
                 <h3 className="session-name">{session.name}</h3>
                 <p className="session-time">{session.time}</p>
                 <p className="session-date">{session.date}</p>
-                <span className="session-status">{session.status}</span>
+                <span className={`session-status ${session.status}`}>
+                  {session.status === 'active' ? 'Live Now' : 
+                   session.status === 'upcoming' ? 'Upcoming' :
+                   session.status === 'completed' ? 'Completed' : 'Cancelled'}
+                </span>
                 
                 <div className="live-stream-container">
                   <a 
@@ -33,8 +99,10 @@ const SessionDashboard = () => {
                         <span className="live-badge">LIVE</span>
                         Join Stream Now
                       </>
+                    ) : session.status === 'upcoming' ? (
+                      "View Details"
                     ) : (
-                      "View Stream Link"
+                      "View Recording"
                     )}
                   </a>
                 </div>
@@ -44,7 +112,9 @@ const SessionDashboard = () => {
         </div>
       ) : (
         <div className="no-sessions">
-          <p>No sessions available</p>
+          <div className="no-sessions-icon">📭</div>
+          <p>No matching sessions found</p>
+          <small>Try adjusting your search or filters</small>
         </div>
       )}
     </div>

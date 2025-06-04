@@ -1,20 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/LessonsCards.css';
 
 const LessonsCards = ({ lessons = [] }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterOption, setFilterOption] = useState('all'); 
+
+  const filteredLessons = lessons.filter(lesson => {
+    const matchesSearch = lesson.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                         lesson.description.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    let matchesFilter = true;
+    if (filterOption === 'withVideo') {
+      matchesFilter = lesson.videoUrl && lesson.videoUrl !== '#';
+    } else if (filterOption === 'withPDF') {
+      matchesFilter = lesson.pdfUrl && lesson.pdfUrl !== '#';
+    }
+
+    return matchesSearch && matchesFilter;
+  });
+
   return (
     <div className="lessons-container">
       <h1 className="page-title">Educational Courses</h1>
       
-      {lessons.length === 0 ? (
+      <div className="search-filter-container">
+        <div className="search-box">
+          <input
+            type="text"
+            placeholder="Search courses..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+          <span className="search-icon">🔍</span>
+        </div>
+        
+        <div className="filter-options">
+        </div>
+      </div>
+
+      {filteredLessons.length === 0 ? (
         <div className="no-content">
           <div className="no-content-icon">📭</div>
-          <h2>No content yet</h2>
-          <p>Check back later for new courses</p>
+          <h2>No matching content found</h2>
+          <p>Try adjusting your search or filters</p>
         </div>
       ) : (
         <div className="cards-grid">
-          {lessons.map((lesson) => (
+          {filteredLessons.map((lesson) => (
             <div className="lesson-card" key={lesson.id}>
               <div className="card-header">
                 <h2 className="lesson-title">{lesson.title}</h2>
@@ -23,12 +56,20 @@ const LessonsCards = ({ lessons = [] }) => {
                 <p className="lesson-description">{lesson.description}</p>
               </div>
               <div className="card-footer">
-                <a href={lesson.videoUrl} className="video-link" target="_blank" rel="noopener noreferrer">
-                  Watch Video
-                </a>
-                <a href={lesson.pdfUrl} className="pdf-link" target="_blank" rel="noopener noreferrer">
-                  Download PDF
-                </a>
+                {lesson.videoUrl && lesson.videoUrl !== '#' ? (
+                  <a href={lesson.videoUrl} className="video-link" target="_blank" rel="noopener noreferrer">
+                    Watch Video
+                  </a>
+                ) : (
+                  <span className="disabled-link">Video Unavailable</span>
+                )}
+                {lesson.pdfUrl && lesson.pdfUrl !== '#' ? (
+                  <a href={lesson.pdfUrl} className="pdf-link" target="_blank" rel="noopener noreferrer">
+                    Download PDF
+                  </a>
+                ) : (
+                  <span className="disabled-link">PDF Unavailable</span>
+                )}
               </div>
               <div className="card-corner"></div>
             </div>

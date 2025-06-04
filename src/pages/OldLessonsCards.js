@@ -1,7 +1,7 @@
-import React from 'react';
-import '../styles/LessonsCards.css';
+import React, { useState } from 'react';
+import '../styles/OldLessonsCards.css';
 
-const LessonsCards = ({ lessons = [
+const OldLessonsCards = ({ lessons = [
   {
     id: 1,
     title: "Intro ",
@@ -23,7 +23,6 @@ const LessonsCards = ({ lessons = [
     videoUrl: "https://drive.google.com/file/d/1K3Yv1uSC6yBwCM8BiWWU_1if2HpIg3x0/view?usp=drive_link",
     pdfUrl: "https://drive.google.com/file/d/1K4W8PUUSZgMwsBOFbWG6MlG7ZQpPz7h7/view?usp=drive_link"
   },
-
   {
     id: 4,
     title: "UML",
@@ -31,28 +30,26 @@ const LessonsCards = ({ lessons = [
     // videoUrl: "#",
     pdfUrl: "https://drive.google.com/file/d/1KXuXlgUlrzzatL3dngy08crZOvXK2Zpi/view?usp=drive_link"
   },
-
   {
     id: 5,
-    title: "Intro to Testing &  Design Patterns",
+    title: "Intro to Testing & Design Patterns",
     description: "Basics of software testing and its types and good design practices",
     videoUrl: "https://drive.google.com/file/d/1MafHc-nc5iz_6saFrQTPqW6msrhwATwK/view?usp=drive_link",
     pdfUrl: "https://drive.google.com/file/d/1NCPS6SrUrtIpjsLhD3RZyMZkcEEGIBZ_/view?usp=drive_link"
   },
   {
     id: 6,
-    title: " SOLID Principles & Package Diagrams",
+    title: "SOLID Principles & Package Diagrams",
     description: "Understand reusable solutions and group related classes into packages.",
     videoUrl: "https://drive.google.com/file/d/1McZZ1t4uHSbeAW-D3uTlNA8Nt68RmsK4/view?usp=drive_link",
     pdfUrl: "https://drive.google.com/file/d/1NCTDJVxCADUHnUqCyJ6BO2fhyrPfkgST/view?usp=drive_link"
   },
-
   {
     id: 7,
     title: "Intro to Databases",
     description: "Foundations of databases and their uses.",
-    videoUrl: "#",
-    pdfUrl: "#"
+    videoUrl: "https://drive.google.com/file/d/1McZZ1t4uHSbeAW-D3uTlNA8Nt68RmsK4/view?usp=drive_link",
+    pdfUrl: "https://drive.google.com/file/d/1NCTDJVxCADUHnUqCyJ6BO2fhyrPfkgST/view?usp=drive_link"
   },
   {
     id: 8,
@@ -85,24 +82,46 @@ const LessonsCards = ({ lessons = [
   {
     id: 12,
     title: "Advanced SQL: Part 4",
-    description: "build The database ",
+    description: "build The database",
     videoUrl: "https://drive.google.com/file/d/12glipJDQUHcV7MepvaBxmsWcj9Ghxhsf/view?usp=drive_link",
     pdfUrl: "https://drive.google.com/file/d/1S9WnSHZj1E4LfYhOBaBalPOM6MJ7wws1/view?usp=drive_link"
   }
 ] }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredLessons = lessons.filter(lesson => {
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      lesson.title.toLowerCase().includes(searchLower) ||
+      lesson.description.toLowerCase().includes(searchLower)
+    );
+  });
+
   return (
     <div className="lessons-container">
       <h1 className="page-title">Educational Courses</h1>
+      
+      {/* Search Bar */}
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search courses..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+        <span className="search-icon">🔍</span>
+      </div>
 
-      {lessons.length === 0 ? (
+      {filteredLessons.length === 0 ? (
         <div className="no-content">
           <div className="no-content-icon">📭</div>
-          <h2>No content yet</h2>
-          <p>Check back later for new courses</p>
+          <h2>No matching content found</h2>
+          <p>Try a different search term</p>
         </div>
       ) : (
         <div className="cards-grid">
-          {lessons.map((lesson) => (
+          {filteredLessons.map((lesson) => (
             <div className="lesson-card" key={lesson.id}>
               <div className="card-header">
                 <h2 className="lesson-title">{lesson.title}</h2>
@@ -111,12 +130,20 @@ const LessonsCards = ({ lessons = [
                 <p className="lesson-description">{lesson.description}</p>
               </div>
               <div className="card-footer">
-                <a href={lesson.videoUrl} className="video-link" target="_blank" rel="noopener noreferrer">
-                  Watch Video
-                </a>
-                <a href={lesson.pdfUrl} className="pdf-link" target="_blank" rel="noopener noreferrer">
-                  Download PDF
-                </a>
+                {lesson.videoUrl && lesson.videoUrl !== '#' ? (
+                  <a href={lesson.videoUrl} className="video-link" target="_blank" rel="noopener noreferrer">
+                    Watch Video
+                  </a>
+                ) : (
+                  <span className="disabled-link">Video Unavailable</span>
+                )}
+                {lesson.pdfUrl && lesson.pdfUrl !== '#' ? (
+                  <a href={lesson.pdfUrl} className="pdf-link" target="_blank" rel="noopener noreferrer">
+                    Download PDF
+                  </a>
+                ) : (
+                  <span className="disabled-link">PDF Unavailable</span>
+                )}
               </div>
               <div className="card-corner"></div>
             </div>
@@ -127,4 +154,4 @@ const LessonsCards = ({ lessons = [
   );
 };
 
-export default LessonsCards;
+export default OldLessonsCards;
