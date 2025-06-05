@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/EduTrack/static/css/main.881b7d29.css",
-    "main.js": "/EduTrack/static/js/main.31e332fd.js",
+    "main.js": "/EduTrack/static/js/main.8bc0ec4e.js",
     "index.html": "/EduTrack/index.html",
     "main.881b7d29.css.map": "/EduTrack/static/css/main.881b7d29.css.map",
-    "main.31e332fd.js.map": "/EduTrack/static/js/main.31e332fd.js.map"
+    "main.8bc0ec4e.js.map": "/EduTrack/static/js/main.8bc0ec4e.js.map"
   },
   "entrypoints": [
     "static/css/main.881b7d29.css",
-    "static/js/main.31e332fd.js"
+    "static/js/main.8bc0ec4e.js"
   ]
 }
