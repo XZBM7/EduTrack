@@ -12,29 +12,230 @@ const Assignments = () => {
   const [userAnswers, setUserAnswers] = useState([]);
   const [timeLeft, setTimeLeft] = useState(null);
   const [timerActive, setTimerActive] = useState(false);
-  const [testMode, setTestMode] = useState(null); // 'timed' or 'untimed'
+  const [testMode, setTestMode] = useState(null); 
   const [selectedMinutes, setSelectedMinutes] = useState(10);
 
   const assignments = [
+    
+  {
+    
+    id: 1,
+    title: "Intro to Software Quiz",
+    description: "A basic quiz covering software concepts.",
+    questions: [
+      {
+        question: "What does 'software' refer to?",
+        options: [
+          "The physical parts of a computer",
+          "The people who use computers",
+          "The programs and operating systems used by a computer",
+          "The electricity powering a computer"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which of the following is an example of system software?",
+        options: [
+          "Microsoft Word",
+          "Windows 10",
+          "Google Chrome",
+          "Adobe Photoshop"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "Which programming language is commonly used for web development?",
+        options: [
+          "HTML",
+          "Python",
+          "C++",
+          "Java"
+        ],
+        correctAnswer: 0
+      },
+      {
+        question: "What is the purpose of an operating system?",
+        options: [
+          "To design hardware",
+          "To connect to the internet",
+          "To manage hardware and software resources",
+          "To create websites"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What is a bug in software?",
+        options: [
+          "A computer virus",
+          "An unwanted feature",
+          "An error in the code",
+          "A user manual"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which of the following is open-source software?",
+        options: [
+          "Microsoft Office",
+          "Adobe Photoshop",
+          "Linux",
+          "Google Docs"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What is the main role of a software developer?",
+        options: [
+          "To repair computer hardware",
+          "To write and maintain code",
+          "To design websites only",
+          "To sell computer parts"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "Which one of these is a programming language?",
+        options: [
+          "Google",
+          "Excel",
+          "Python",
+          "Facebook"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "What do you call a visual interface where you can click icons and use windows?",
+        options: [
+          "Command line",
+          "Text editor",
+          "Graphical User Interface (GUI)",
+          "Processor"
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which tool is commonly used to write and edit code?",
+        options: [
+          "Paint",
+          "WordPad",
+          "Visual Studio Code",
+          "Chrome"
+        ],
+        correctAnswer: 2
+      }
+    ]
+    
+  },
+  {
+  id: 2,
+  title: "SOLID Principles Quiz",
+  description: "Test your understanding of the SOLID principles in object-oriented design, with both theoretical and code-based questions.",
+  questions: [
     {
-      id: 1,
-      title: "Intro to Software Quiz",
-      description: "A basic quiz covering software concepts.",
-      questions: [
-        {
-          question: "What does 'software' refer to?",
-          options: [
-            "The physical parts of a computer",
-            "The people who use computers",
-            "The programs and operating systems used by a computer",
-            "The electricity powering a computer"
-          ],
-          correctAnswer: 2
-        },
-        // ... rest of the questions
-      ]
+      question: "What does the 'S' in SOLID stand for?",
+      options: [
+        "Software Scalability",
+        "Systematic Security",
+        "Single Responsibility",
+        "Structured Reusability"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "Which of the following best describes the Single Responsibility Principle (SRP)?",
+      options: [
+        "A class should have one and only one reason to change",
+        "A class should handle all logic related to a module",
+        "Multiple classes can handle the same responsibility",
+        "A method must not call another method"
+      ],
+      correctAnswer: 0
+    },
+    {
+      question: "According to the Open/Closed Principle, a software entity should be:",
+      options: [
+        "Open for modification, closed for testing",
+        "Closed for extension, open for bug fixes",
+        "Open for extension, closed for modification",
+        "Open for inheritance, closed for composition"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "Which principle focuses on the ability to replace subclasses without affecting program correctness?",
+      options: [
+        "Dependency Inversion Principle",
+        "Interface Segregation Principle",
+        "Liskov Substitution Principle",
+        "Open/Closed Principle"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "What is the core idea behind the Interface Segregation Principle?",
+      options: [
+        "Clients should depend on large, generic interfaces",
+        "Interfaces should contain as many methods as possible",
+        "Clients should not be forced to depend on methods they do not use",
+        "All interfaces should inherit from one base class"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "In the context of SOLID, what does the Dependency Inversion Principle advocate?",
+      options: [
+        "High-level modules should depend on low-level modules",
+        "Low-level modules should contain business logic",
+        "Both high- and low-level modules should depend on abstractions",
+        "Depend only on concrete classes"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "Which of the following violates the Liskov Substitution Principle?",
+      options: [
+        "A subclass overrides a method with the same expected behavior",
+        "A subclass throws an exception when a method from the base class is called",
+        "A subclass extends a base class and adds more methods",
+        "A subclass inherits from a base class and uses polymorphism"
+      ],
+      correctAnswer: 1
+    },
+
+
+    {
+      question: "Which principle is violated in the following code?\n\nclass Printer {\n  void printDocument() {...}\n  void scanDocument() {...}\n  void faxDocument() {...}\n}",
+      options: [
+        "Single Responsibility Principle",
+        "Open/Closed Principle",
+        "Liskov Substitution Principle",
+        "Dependency Inversion Principle"
+      ],
+      correctAnswer: 0
+    },
+    {
+      question: "What principle is being respected in this design?\n\ninterface Bird {\n  void fly();\n}\n\nclass Eagle implements Bird {\n  public void fly() {...}\n}",
+      options: [
+        "Liskov Substitution Principle",
+        "Open/Closed Principle",
+        "Interface Segregation Principle",
+        "Single Responsibility Principle"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "Which principle is applied in this code?\n\nclass EmailSender {\n  void send(String message) {...}\n}\n\nclass NotificationService {\n  private EmailSender sender;\n\n  NotificationService(EmailSender sender) {\n    this.sender = sender;\n  }\n\n  void notifyUser() {\n    sender.send(\"Hello!\");\n  }\n}",
+      options: [
+        "Single Responsibility Principle",
+        "Liskov Substitution Principle",
+        "Dependency Inversion Principle",
+        "Interface Segregation Principle"
+      ],
+      correctAnswer: 2
     }
-  ];
+  ]
+}
+];
 
   useEffect(() => {
     const storedAttempts = localStorage.getItem('assignmentAttempts');
@@ -61,7 +262,6 @@ const Assignments = () => {
 
   const startTest = (testId, mode) => {
     setTestMode(mode);
-    
     if (mode === 'timed') {
       setTimeLeft(selectedMinutes * 60);
       setTimerActive(true);
@@ -95,11 +295,11 @@ const Assignments = () => {
 
   const nextQuestion = () => {
     saveAnswer();
-    
     const currentTest = getCurrentTest();
     if (currentQuestion < currentTest.questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
-      setSelectedOption(null);
+      const nextAnswer = userAnswers.find(a => a.questionIndex === currentQuestion + 1);
+      setSelectedOption(nextAnswer ? nextAnswer.selectedOption : null);
     }
   };
 
@@ -131,12 +331,24 @@ const Assignments = () => {
   };
 
   const submitTest = () => {
-    saveAnswer();
-    setTimerActive(false);
-    
     const currentTest = getCurrentTest();
-    // Mark unanswered questions as incorrect
-    const allAnswers = [...userAnswers];
+
+    let allAnswers = [...userAnswers];
+    const isCorrect = selectedOption === currentTest.questions[currentQuestion].correctAnswer;
+
+    const existingIndex = allAnswers.findIndex(a => a.questionIndex === currentQuestion);
+    const lastAnswer = {
+      questionIndex: currentQuestion,
+      selectedOption,
+      isCorrect
+    };
+
+    if (existingIndex !== -1) {
+      allAnswers[existingIndex] = lastAnswer;
+    } else {
+      allAnswers.push(lastAnswer);
+    }
+
     for (let i = 0; i < currentTest.questions.length; i++) {
       if (!allAnswers.some(a => a.questionIndex === i)) {
         allAnswers.push({
@@ -146,19 +358,19 @@ const Assignments = () => {
         });
       }
     }
-    
+
+    setUserAnswers(allAnswers);
     const finalScore = allAnswers.filter(a => a.isCorrect).length;
     setScore(finalScore);
     setShowResult(true);
+    setTimerActive(false);
   };
 
   const restartTest = () => {
     startTest(activeTest, testMode);
   };
 
-  const getCurrentTest = () => {
-    return assignments.find(a => a.id === activeTest);
-  };
+  const getCurrentTest = () => assignments.find(a => a.id === activeTest);
 
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
@@ -177,7 +389,6 @@ const Assignments = () => {
         <div className="assignment-options">
           {question.options.map((option, index) => {
             let optionClass = "assignment-option";
-
             if (userAnswer) {
               if (index === question.correctAnswer) {
                 optionClass += " assignment-correct";
@@ -185,12 +396,8 @@ const Assignments = () => {
                 optionClass += " assignment-incorrect";
               }
             }
-
             return (
-              <div
-                key={index}
-                className={optionClass}
-              >
+              <div key={index} className={optionClass}>
                 {option}
               </div>
             );
@@ -205,7 +412,6 @@ const Assignments = () => {
       <div className="assignment-test-mode-content">
         <span className="assignment-close-btn" onClick={() => setActiveTest(null)}>&times;</span>
         <h2>Choose Test Mode for {assignment.title}</h2>
-        
         <div className="test-mode-options">
           <div 
             className={`test-mode-card ${testMode === 'untimed' ? 'selected' : ''}`}
@@ -215,7 +421,6 @@ const Assignments = () => {
             <p>Take the test without time pressure</p>
             <button className="test-mode-btn">Start Untimed</button>
           </div>
-          
           <div 
             className={`test-mode-card ${testMode === 'timed' ? 'selected' : ''}`}
             onClick={() => startTest(assignment.id, 'timed')}
