@@ -12,15 +12,27 @@ const NewsPage = () => {
       isImportant: true,
       category: "announcement"
     },
-    // {
-    //   id: 2,
-    //   title: "Scholarship Applications Open",
-    //   content: "Applications for the fall semester scholarships are now being accepted until August 30th.",
-    //   date: "2023-08-15",
-    //   author: "Financial Aid Department",
-    //   isImportant: false,
-    //   category: "scholarship"
-    // },
+     {
+     id: 2,
+  title: "The New partner Hashira",
+  content: `جاهزين لكامب جديد؟😆
+نقدم لكم Advanced Software Engineering Camp
+الكامب اللي هيركز على مواضيع متقدمه من ال Software Engineering واللي منها:
+🔻Microservices
+🔻OCL & UML
+🔻Principles (OOP & AOP)
+🔻Testing
+🔻Clean Code
+🔻Big Data & NoSQL
+
+4 اسابيع من الاستفاده والتعلم والتطبيق على ال Software Engineering
+لينك التقديم👇(التقديم مفتوح لحد يوم 14 June )
+https://forms.gle/EwLNUKRJwzneMJyd6`,
+  date: "2025-06-10",
+  author: "XZ",
+  isImportant: true,
+  category: "general"
+},
     // {
     //   id: 3,
     //   title: "New Library Hours",
@@ -37,12 +49,10 @@ const NewsPage = () => {
   const [sortBy, setSortBy] = useState('newest'); // 'newest', 'oldest'
 
   const filteredNews = news.filter(item => {
-    // Search term filtering
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
                          item.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          item.author.toLowerCase().includes(searchTerm.toLowerCase());
     
-    // Category/importance filtering
     const matchesFilter = filter === 'all' || 
                          (filter === 'important' && item.isImportant) || 
                          item.category === filter;

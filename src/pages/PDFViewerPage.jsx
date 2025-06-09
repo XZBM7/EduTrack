@@ -24,6 +24,8 @@ const PDFViewer = () => {
     { name: 'Chapter 5,6 - Design Patterns', path: 'pdf/Chapter_5,6_Microservices_Design_Patterns_Communication_Patterns….pdf' },
     { name: 'Chapter 7 - OCL + UML', path: 'pdf/chapter 7- OCL + UML.pdf' },
     { name: 'Chapter 8 - AOP & OOP', path: 'pdf/Chapter 8 - AOP & OOP.pdf' },
+    { name: 'Chapter 9 - Testing software', path: 'pdf/Chapter 9 - Testing software.pdf' },
+
   ];
 
   useEffect(() => {
@@ -79,7 +81,6 @@ const PDFViewer = () => {
     document.body.removeChild(link);
   }
 
-  // Touch support for mobile devices
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
@@ -93,18 +94,17 @@ const PDFViewer = () => {
 
   const handleTouchEnd = () => {
     if (touchStart - touchEnd > 50) {
-      changePage(1); // Swipe left for next page
+      changePage(1); 
     }
 
     if (touchStart - touchEnd < -50) {
-      changePage(-1); // Swipe right for previous page
+      changePage(-1); 
     }
   };
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (!selectedPdf) return; // Don't handle keys if no PDF is selected
+      if (!selectedPdf) return; 
       
       if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
         e.preventDefault();
@@ -122,7 +122,6 @@ const PDFViewer = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [numPages, pageNumber, bookMode, selectedPdf]);
 
-  // Click outside to exit book mode
   useEffect(() => {
     if (!bookMode) return;
 

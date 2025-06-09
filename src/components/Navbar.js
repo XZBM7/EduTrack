@@ -9,7 +9,6 @@ const Navbar = () => {
   const [showResults, setShowResults] = useState(false);
   const navigate = useNavigate();
 
-  // Sample data to search through (you can replace with your actual data)
   const searchData = [
     { id: 1, title: 'Introduction to Programming', type: 'course', path: '/CourseCurriculum' },
     { id: 2, title: 'Software Engineering Basics', type: 'course', path: '/CourseCurriculum' },
@@ -128,12 +127,12 @@ const Navbar = () => {
         <Link to="/Assignments" className="nav-link">
           <FaCalendarAlt className="nav-icon" />
           <span>Assignments</span>
-          <span className="notification-badge">1</span>
+          <span className="notification-badge">2</span>
         </Link>
         <Link to="/NewsPage" className="nav-link">
           <FaEnvelope className="nav-icon" />
           <span>News</span>
-          <span className="notification-badge">1</span>
+          <span className="notification-badge">2</span>
         </Link>
       </div>
       
