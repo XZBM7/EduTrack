@@ -2,7 +2,7 @@ export const sessionData = [
   {
     id: 1,
     name: "Intro to Software & Big data",
-    time: "7:00 pm",
+    time: "8:10 pm",
     date: "2025-06-15",
     status: "upcoming",
     icon: "📊",
