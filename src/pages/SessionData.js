@@ -6,7 +6,7 @@ export const sessionData = [
     date: "2025-06-15",
     status: "upcoming",
     icon: "📊",
-    // liveLink: ""
+    liveLink: "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_ZjA0NWI2OTEtMDk0OC00ZTcwLTg5ZDYtNTc2MGNhOTI3ODhm%40thread.v2/0?context=%7B%22Tid%22%3A%22aadc0e0a-65ee-471a-99a1-9f86faecbaed%22%2C%22Oid%22%3A%226dbed4a2-45ee-41d9-9e1b-749db52d04c7%22%7D"
   },
   //   {
   //     id: 2,
