@@ -210,6 +210,17 @@ const SocialContacts = () => {
       delay: "0.6s"
     },
     {
+  name: "YouTube Channel",
+  url: "https://youtube.com/@fcihashira?si=tksdfmZzH4sNnQDZ",
+  icon: (
+    <Icon viewBox="0 0 24 24">
+      <path d="M23.498 6.186a2.958 2.958 0 00-2.08-2.087C19.72 3.5 12 3.5 12 3.5s-7.72 0-9.418.599a2.958 2.958 0 00-2.08 2.087C0 7.91 0 12 0 12s0 4.09.502 5.814a2.958 2.958 0 002.08 2.087C4.28 20.5 12 20.5 12 20.5s7.72 0 9.418-.599a2.958 2.958 0 002.08-2.087C24 16.09 24 12 24 12s0-4.09-.502-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" fill="#fff"/>
+    </Icon>
+  ),
+  bgColor: "#FF0000", 
+  delay: "0.8s"
+},
+    {
       name: "WhatsApp Group",
       url: "https://chat.whatsapp.com/Dhfrnn4hlJx3W8QAI9ij0n",
       icon: (

@@ -73,7 +73,6 @@ https://forms.gle/EwLNUKRJwzneMJyd6`,
         <p>Important updates and messages for students</p>
       </header>
 
-      {/* Search and Filter Bar */}
       <div className="news-controls">
         <div className="search-container">
           <input

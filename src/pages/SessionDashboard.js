@@ -7,12 +7,10 @@ const SessionDashboard = () => {
   const [statusFilter, setStatusFilter] = useState("all"); // 'all', 'active', 'completed', 'cancelled', 'upcoming'
 
   const filteredSessions = sessionData.filter((session) => {
-    // Search filtering
     const matchesSearch = session.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                          session.time.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          session.date.toLowerCase().includes(searchTerm.toLowerCase());
     
-    // Status filtering
     const matchesStatus = statusFilter === "all" || session.status === statusFilter;
 
     return matchesSearch && matchesStatus;
@@ -22,7 +20,6 @@ const SessionDashboard = () => {
     <div className="session-dashboard">
       <h2 className="dashboard-title">Session Status</h2>
       
-      {/* Search and Filter Bar */}
       <div className="dashboard-controls">
         <div className="search-container">
           <input
@@ -100,7 +97,7 @@ const SessionDashboard = () => {
                         Join Stream Now
                       </>
                     ) : session.status === 'upcoming' ? (
-                      "View Details"
+                      "Link of Stream "
                     ) : (
                       "View Recording"
                     )}

@@ -127,7 +127,7 @@ const Navbar = () => {
         <Link to="/Assignments" className="nav-link">
           <FaCalendarAlt className="nav-icon" />
           <span>Assignments</span>
-          <span className="notification-badge">2</span>
+          <span className="notification-badge">3</span>
         </Link>
         <Link to="/NewsPage" className="nav-link">
           <FaEnvelope className="nav-icon" />

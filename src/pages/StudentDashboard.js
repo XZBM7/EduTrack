@@ -18,11 +18,11 @@ const StudentDashboard = () => {
       setTimeout(() => {
         setStats({
           totalLectures: 11,
-          completedLectures: 0,
+          completedLectures: 1,
           remainingLectures: 11,
           canceledLectures: 0,
-          upcomingLectures: 0,
-          assignmentsDue: 0,
+          upcomingLectures: 2,
+          assignmentsDue: 3,
           assignmentsPending: 0
         });
         setLoading(false);
@@ -74,7 +74,7 @@ const StudentDashboard = () => {
           <div className="stat-content">
             <h3>Upcoming Lectures</h3>
             <p className="stat-value">{stats.upcomingLectures} this week</p>
-            <p className="stat-change">Next:  6/15/2025</p>
+            <p className="stat-change">Next:  6/17/2025</p>
           </div>
         </div>
 
@@ -106,8 +106,8 @@ const StudentDashboard = () => {
             </div>
           </div>
           <div className="course-syllabus">
-            <h4>Current Topic: Intro to Software & Big data</h4>
-            <p>Next: 6/15/2025</p>
+            <h4>Current Topic: Big data & NO SQL</h4>
+            <p>Next: 6/17/2025</p>
           </div>
         </section>
 
@@ -119,7 +119,7 @@ const StudentDashboard = () => {
           <div className="materials-list">
             <div className="material-item">
               <FaFileAlt className="material-icon" />
-              <span>Lecture 0 Slides (PDF)</span>
+              <span>Lecture 10 Slides (PDF)</span>
             </div>
             <div className="material-item">
               <FaVideo className="material-icon" />
@@ -127,7 +127,7 @@ const StudentDashboard = () => {
             </div>
             <div className="material-item">
               <FaTasks className="material-icon" />
-              <span>Assignment 0 active</span>
+              <span>Assignment 3 active</span>
             </div>
           </div>
         </section>

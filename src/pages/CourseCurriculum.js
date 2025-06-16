@@ -5,7 +5,6 @@ const CourseCurriculum = () => {
   const [completedLectures, setCompletedLectures] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Load from localStorage on component mount
   useEffect(() => {
     const loadProgress = () => {
       try {
@@ -25,7 +24,6 @@ const CourseCurriculum = () => {
 
     loadProgress();
     
-    // Add event listener for storage changes
     const handleStorageChange = (e) => {
       if (e.key === 'completedLectures') {
         loadProgress();
@@ -36,7 +34,6 @@ const CourseCurriculum = () => {
     return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
-  // Save to localStorage when completedLectures changes
   useEffect(() => {
     if (isLoaded) {
       localStorage.setItem('completedLectures', JSON.stringify(completedLectures));

@@ -20,7 +20,7 @@ const Assignments = () => {
   {
     
     id: 1,
-    title: "Intro to Software Quiz",
+    title: "Intro Quiz",
     description: "A basic quiz covering software concepts.",
     questions: [
       {
@@ -236,473 +236,732 @@ const Assignments = () => {
   ]
 },
 
-  {
-    id: 3,
-    title: "Physics Quiz - 10 week ",
-    description: "Test your understanding of electromagnetic induction concepts including EMF, power, and magnetic fields.",
-    questions: [
-      {
-        question: "عملية توليد التيار الكهربائي الحثي في دائرة كهربية مغلقة يسمى...",
-        options: [
-          "الحث الذاتي",
-          "الحث المتبادل",
-          "الحث المغناطيسي",
-          "الحث الكهرومغناطيسي"
-        ],
-        correctAnswer: 3
-      },
-      {
-        question: "إذا كان متوسط القدرة المستهلكة في مصباح كهربي 60 W فما القيمة العظمى للقدرة بوحدة W؟",
-        options: [
-          "30",
-          "60",
-          "90",
-          "120"
-        ],
-        correctAnswer: 3
-      },
-      {
-        question: "القوة الدافعة الكهربائية الحثية المتولدة في سلك طوله 1m بسرعة 4 m/s عموديًا على مجال مغناطيسي شدته 0.5 T",
-        options: [
-          "2",
-          "5.5",
-          "6",
-          "8"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "لتحديد اتجاه التيار الحثي نستخدم قاعدة اليد اليمنى",
-        options: [
-          "✓",
-          "x"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "تقاس القوة الدافعة الكهربية بوحدة النيوتن",
-        options: [
-          "✓",
-          "x"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "١. يحول الطاقة الميكانيكية إلى طاقة كهربائية:",
-        options: [
-          "الجلفانومتر",
-          "الفولتمتر",
-          "المحول الكهربائي",
-          "المولد الكهربائي"
-        ],
-        correctAnswer: 3
-      },
-      {
-        question: "٢. القوة الدافعة الكهربائية المتولدة في المولد الكهربائي تعتمد على:",
-        options: [
-          "طول السلك",
-          "عدد اللفات",
-          "شدة المجال المغناطيسي",
-          "جميع ما سبق"
-        ],
-        correctAnswer: 3
-      },
-      {
-        question: "٣. في المولد الكهربائي أكبر قيمة في التيار الناتج عندما تكون الحلقة:",
-        options: [
-          "أفقية",
-          "رأسية",
-          "تصنع زاوية 45°",
-          "تصنع زاوية 30°"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "٤. في المولد الكهربائي أصغر قيمة في التيار الناتج عندما تكون الحلقة:",
-        options: [
-          "أفقية",
-          "رأسية",
-          "تصنع زاوية 45°",
-          "تصنع زاوية 30°"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "٥. اتجاه التيار الناتج من المولد الكهربائي يتغير كلما دارت الحلقة زاوية مقدارها:",
-        options: [
-          "30°",
-          "45°",
-          "90°",
-          "180°"
-        ],
-        correctAnswer: 3
-      },
-      {
-        question: "علل: حلقات سلك المولد تلف حول قلب من حديد",
-        options: [
-          "لزيادة شدة المجال المغناطيسي",
-          "لإضعاف التيار الكهربائي",
-          "لتحسين العزل الكهربائي",
-          "لتقليل المقاومة"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "يستخدم لرفع أو خفض الجهد الكهربائي المتناوب:",
-        options: [
-          "المولد الكهربائي",
-          "المحرك الكهربائي",
-          "المحول الكهربائي"
-        ],
-        correctAnswer: 2
-      },
-      {
-        question: "ملفا المحول معزولان كهربائيًا وملفوفان حول قلب:",
-        options: [
-          "بلاستيكي",
-          "خشبي",
-          "حديدي"
-        ],
-        correctAnswer: 2
-      },
-      {
-        question: "القوة الدافعة الكهربائية EMF المتولدة في الملف الثانوي للمحول تسمى:",
-        options: [
-          "الجهد الثانوي",
-          "الجهد الابتدائي",
-          "القدرة الثانوية",
-          "التيار الثانوي"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "الجهد الثانوي للمحول يتناسب طرديًا مع:",
-        options: [
-          "الجهد الابتدائي",
-          "عدد لفات الملف الابتدائي",
-          "القدرة الثانوية",
-          "التيار الثانوي"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "في المحول الرافع يكون التيار الثانوي أقل من التيار الابتدائي.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "في المحول الخافض يكون التيار الابتدائي أقل من التيار الثانوي.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "علل: تستخدم المحولات لعزل دائرة عن أخرى:",
-        options: [
-          "لأن بسلك اللف الابتدائي لا يتصل بسلك اللف الثانوي",
-          "لزيادة المقاومة",
-          "لمنع فقدان الطاقة",
-          "لزيادة المجال المغناطيسي"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "١) القدرة الكلية المنبعثة من جسم ساخن....... بازياد درجة الحرارة.",
-        options: [
-          "تقل",
-          "لا تتغير",
-          "تزداد"
-        ],
-        correctAnswer: 2
-      },
-      {
-        question: "٢) الأجسام الأسخن تشع قدرة ....... قدرة الأجسام الأبرد.",
-        options: [
-          "أكبر من",
-          "تساوي",
-          "أقل من"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "٣) قدرة الموجات الكهرومغناطيسية تتناسب طرديًا مع:",
-        options: [
-          "T C",
-          "T O",
-          "T' O",
-          "T' C"
-        ],
-        correctAnswer: 3
-      },
-      {
-        question: "١) تردد العتبة يتغير بتغير نوع الفلز.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "٢) حسب نظرية الموجات الكهرومغناطيسية، المجال الكهربائي يحرر الإلكترونات من السطح.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "١) أسلط كومبتون أشعة X ذات طول موجي معلوم على هدف من:",
-        options: [
-          "الذهب",
-          "الفضة",
-          "الجرافيت"
-        ],
-        correctAnswer: 2
-      },
-      {
-        question: "٢) أشعة X المشتتة في تجارب كومبتون أصبح طولها الموجي ..... الطول الموجي للإشعاع الساقط.",
-        options: [
-          "أكبر من",
-          "يساوي",
-          "أصغر من"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "٣) طاقة الفوتون تتناسب عكسيًا مع:",
-        options: [
-          "سرعته",
-          "تردده",
-          "طوله الموجي"
-        ],
-        correctAnswer: 2
-      },
-      {
-        question: "١) طاقة ذرة الهيدروجين قيمتها:",
-        options: [
-          "أحيانًا موجبة",
-          "أحيانًا سالبة",
-          "دائمًا موجبة",
-          "دائمًا سالبة"
-        ],
-        correctAnswer: 3
-      },
-      {
-        question: "٢) طاقة ذرة الهيدروجين تعتمد على:",
-        options: [
-          "n",
-          "1/n²",
-          "1/n",
-          "n²"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "٣) انتقال إلكترون ذرة هيدروجين من مستوى حالة الإثارة إلى المستوى الثالث يعطي:",
-        options: [
-          "سلسلة باشن",
-          "سلسلة بالمر",
-          "سلسلة ليمان"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "٤) تعرف مجموعة الخطوط الملونة التي تكون طيف ذرة الهيدروجين بسلسلة:",
-        options: [
-          "باشن",
-          "ليمان",
-          "بالمر"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "٥) الضوء المترابط هو:",
-        options: [
-          "ضوء من مصدرين أو أكثر يولد مجموعة ذات مقدمات منتظمة أو موجات متطابقة عند القمم والقيعان.",
-          "ضوء بمقدمات موجية غير متزامنة تضيء الأجسام بضوء أبيض منتظم.",
-          "ضوء ناتج عن تفكك ذري في الموجات الكهرومغناطيسية.",
-          "ضوء مرئي لا يمكن تمييز طيفه بسهولة."
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "١) القوى النووية القوية هي قوى:",
-        options: [
-          "تجاذب",
-          "تنافر",
-          "تجاذب وتنافر"
-        ],
-        correctAnswer: 2
-      },
-      {
-        question: "٢) حزم الطاقة ذات مستويات الطاقة الدنيا في الذرة تسمى:",
-        options: [
-          "حزم التوصيل",
-          "حزم التكافؤ",
-          "فجوة الطاقة"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "٣) الجهاز المستخدم لدراسة طيف الإشعاع الذري هو:",
-        options: [
-          "مطياف الكتلة",
-          "المطياف",
-          "المجهر الماسح"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "النموذج الذري يتفق مع قوانين الكهرومغناطيسية.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "في المحول الرافع يكون التيار الثانوي أقل من التيار الابتدائي.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "يوصل الملف الابتدائي للمحول بمصدر جهد ثابت.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "الجرمانيوم حساس جدًا للحرارة في معظم التطبيقات الإلكترونية.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "١) مجموع عدد البروتونات والنيترونات في النواة يسمى:",
-        options: [
-          "التكافؤ",
-          "العدد الذري",
-          "العدد الكتلي"
-        ],
-        correctAnswer: 2
-      },
-      {
-        question: "٢) النشاطية الإشعاعية تتناسب طردياً مع:",
-        options: [
-          "طاقة الربط النووية",
-          "العدد الذري",
-          "عمر النصف"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "٣) انتقال إلكترونات ذرة الهيدروجين من حالة الإثارة إلى المستوى الثالث يعطي سلسلة:",
-        options: [
-          "ليمان",
-          "بالمر",
-          "رزر فورد"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "٤) موصلية المواد ... عندما تقل فجوة الطاقة بين حزم التوصيل وحزم التكافؤ:",
-        options: [
-          "تزداد",
-          "لا تتغير",
-          "تنقص"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "١) ذرات نفس العنصر لها كتل مختلفة ولها الخصائص الكيميائية نفسها تُسمى:",
-        options: [
-          "أيونات",
-          "متعددات الأشكال (تطور النظير)",
-          "نظائر"
-        ],
-        correctAnswer: 2
-      },
-      {
-        question: "٢) من الصعب قياس زخم جسيم وتحديد موقعه بدقة في الوقت نفسه، هذا يُعرف بمبدأ:",
-        options: [
-          "مبدأ الشك لهايزنبرج",
-          "مبدأ التراكب",
-          "مبدأ الإنعكاس"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "٣) يستخدم لرفع أو خفض الجهد الكهربي المتناوب:",
-        options: [
-          "المحول الكهربائي",
-          "المحرك الكهربائي",
-          "المولد الكهربائي"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "٤) عملية اضمحلال تنبعث فيها جسيم ألفا من النواة تسمى:",
-        options: [
-          "انبعاث بيتا",
-          "انبعاث ألفا",
-          "انشطار نووي"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "القدرة المرافقة للتيار المتناوب ثابتة.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "تردد العتبة يتغير بتغير نوع الفلز.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "طيف الأجسام المتوهجة يغطي مدى واسع من الأطوال الموجية.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "يستخدم الدايود في تحويل الجهد المستمر إلى الجهد المتناوب.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "النموذج النووي يتفق مع قوانين الكهرومغناطيسية.",
-        options: [
-          "✓",
-          "X"
-        ],
-        correctAnswer: 1
-      }
-    ]
-  }
+{
+  "id": 4,
+  "title": "Intro to Software Quiz & Big data",
+  "description": "A basic quiz covering software, development methodologies, DevOps, and Big Data concepts.",
+  "questions": [
+    {
+      "question": "What does 'software' refer to?",
+      "options": [
+        "The physical parts of a computer",
+        "The people who use computers",
+        "The programs and operating systems used by a computer",
+        "The electricity powering a computer"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is considered system software?",
+      "options": [
+        "Adobe Photoshop",
+        "Google Chrome",
+        "Windows OS",
+        "Zoom"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is middleware in software systems?",
+      "options": [
+        "A game development platform",
+        "A tool for writing code",
+        "Software that connects system software with application software",
+        "Hardware configuration tool"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is an example of application software?",
+      "options": [
+        "Device drivers",
+        "Antivirus software",
+        "Microsoft Word",
+        "BIOS"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of these is a phase in the Software Development Life Cycle (SDLC)?",
+      "options": [
+        "Marketing",
+        "Requirement Gathering",
+        "Hiring Developers",
+        "Packaging"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which methodology follows a strict linear process?",
+      "options": [
+        "Agile",
+        "DevOps",
+        "Scrum",
+        "Waterfall"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "In Agile, what is valued most?",
+      "options": [
+        "Following strict documentation",
+        "Long-term planning",
+        "Individuals and interactions",
+        "Strict timelines"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Who facilitates the Scrum process and removes blockers?",
+      "options": [
+        "Project Manager",
+        "Scrum Master",
+        "Team Lead",
+        "Product Owner"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is a Sprint in Scrum?",
+      "options": [
+        "A one-time deployment",
+        "A team-building exercise",
+        "A fixed-length iteration to build product features",
+        "The final stage of deployment"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which artifact in Scrum is used to track remaining work?",
+      "options": [
+        "Sprint Retrospective",
+        "Product Backlog",
+        "Burndown Chart",
+        "Stand-Up Chart"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following best describes DevOps?",
+      "options": [
+        "A programming language",
+        "A design framework",
+        "A culture combining development and operations",
+        "A testing tool"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the main goal of DevOps?",
+      "options": [
+        "Create beautiful UIs",
+        "Build documentation",
+        "Automate and speed up software delivery",
+        "Replace developers with AI"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is a CI/CD tool?",
+      "options": [
+        "Photoshop",
+        "Jenkins",
+        "MongoDB",
+        "Postman"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which tool is used for container orchestration?",
+      "options": [
+        "Docker",
+        "Git",
+        "Kubernetes",
+        "Jira"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does Big Data refer to?",
+      "options": [
+        "A large computer",
+        "A data structure",
+        "Extremely large and complex datasets",
+        "Database backup tools"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of these is NOT one of the 5 V's of Big Data?",
+      "options": [
+        "Volume",
+        "Variety",
+        "Visualization",
+        "Veracity"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which framework is commonly used for distributed Big Data processing?",
+      "options": [
+        "React.js",
+        "Apache Hadoop",
+        "PostgreSQL",
+        "Figma"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is Apache Kafka used for?",
+      "options": [
+        "Web hosting",
+        "Video rendering",
+        "Real-time data streaming",
+        "Version control"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which cloud platform offers BigQuery for Big Data analytics?",
+      "options": [
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "DigitalOcean"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which language is commonly used for AI and Big Data processing?",
+      "options": [
+        "HTML",
+        "CSS",
+        "Python",
+        "Bash"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of these tools is used to manage infrastructure as code?",
+      "options": [
+        "Terraform",
+        "MySQL",
+        "Nginx",
+        "Power BI"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "In Scrum, who owns the Product Backlog?",
+      "options": [
+        "Scrum Master",
+        "Product Owner",
+        "Development Team",
+        "Stakeholders"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is an IDE used for Python development?",
+      "options": [
+        "Eclipse",
+        "Xcode",
+        "PyCharm",
+        "Figma"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the purpose of a Sprint Review?",
+      "options": [
+        "Code review session",
+        "Daily sync meeting",
+        "To demonstrate work done and get feedback",
+        "Bug fixing session"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is a real-world example of Big Data usage?",
+      "options": [
+        "Installing Microsoft Word",
+        "Using Excel to make a table",
+        "Google Maps using traffic data to suggest routes",
+        "Creating a PowerPoint presentation"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+},
+
+  // {
+  //   id: 3,
+  //   title: "Physics Quiz - 10 week ",
+  //   description: "Test your understanding of electromagnetic induction concepts including EMF, power, and magnetic fields.",
+  //   questions: [
+  //     {
+  //       question: "عملية توليد التيار الكهربائي الحثي في دائرة كهربية مغلقة يسمى...",
+  //       options: [
+  //         "الحث الذاتي",
+  //         "الحث المتبادل",
+  //         "الحث المغناطيسي",
+  //         "الحث الكهرومغناطيسي"
+  //       ],
+  //       correctAnswer: 3
+  //     },
+  //     {
+  //       question: "إذا كان متوسط القدرة المستهلكة في مصباح كهربي 60 W فما القيمة العظمى للقدرة بوحدة W؟",
+  //       options: [
+  //         "30",
+  //         "60",
+  //         "90",
+  //         "120"
+  //       ],
+  //       correctAnswer: 3
+  //     },
+  //     {
+  //       question: "القوة الدافعة الكهربائية الحثية المتولدة في سلك طوله 1m بسرعة 4 m/s عموديًا على مجال مغناطيسي شدته 0.5 T",
+  //       options: [
+  //         "2",
+  //         "5.5",
+  //         "6",
+  //         "8"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "لتحديد اتجاه التيار الحثي نستخدم قاعدة اليد اليمنى",
+  //       options: [
+  //         "✓",
+  //         "x"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "تقاس القوة الدافعة الكهربية بوحدة النيوتن",
+  //       options: [
+  //         "✓",
+  //         "x"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "١. يحول الطاقة الميكانيكية إلى طاقة كهربائية:",
+  //       options: [
+  //         "الجلفانومتر",
+  //         "الفولتمتر",
+  //         "المحول الكهربائي",
+  //         "المولد الكهربائي"
+  //       ],
+  //       correctAnswer: 3
+  //     },
+  //     {
+  //       question: "٢. القوة الدافعة الكهربائية المتولدة في المولد الكهربائي تعتمد على:",
+  //       options: [
+  //         "طول السلك",
+  //         "عدد اللفات",
+  //         "شدة المجال المغناطيسي",
+  //         "جميع ما سبق"
+  //       ],
+  //       correctAnswer: 3
+  //     },
+  //     {
+  //       question: "٣. في المولد الكهربائي أكبر قيمة في التيار الناتج عندما تكون الحلقة:",
+  //       options: [
+  //         "أفقية",
+  //         "رأسية",
+  //         "تصنع زاوية 45°",
+  //         "تصنع زاوية 30°"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "٤. في المولد الكهربائي أصغر قيمة في التيار الناتج عندما تكون الحلقة:",
+  //       options: [
+  //         "أفقية",
+  //         "رأسية",
+  //         "تصنع زاوية 45°",
+  //         "تصنع زاوية 30°"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "٥. اتجاه التيار الناتج من المولد الكهربائي يتغير كلما دارت الحلقة زاوية مقدارها:",
+  //       options: [
+  //         "30°",
+  //         "45°",
+  //         "90°",
+  //         "180°"
+  //       ],
+  //       correctAnswer: 3
+  //     },
+  //     {
+  //       question: "علل: حلقات سلك المولد تلف حول قلب من حديد",
+  //       options: [
+  //         "لزيادة شدة المجال المغناطيسي",
+  //         "لإضعاف التيار الكهربائي",
+  //         "لتحسين العزل الكهربائي",
+  //         "لتقليل المقاومة"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "يستخدم لرفع أو خفض الجهد الكهربائي المتناوب:",
+  //       options: [
+  //         "المولد الكهربائي",
+  //         "المحرك الكهربائي",
+  //         "المحول الكهربائي"
+  //       ],
+  //       correctAnswer: 2
+  //     },
+  //     {
+  //       question: "ملفا المحول معزولان كهربائيًا وملفوفان حول قلب:",
+  //       options: [
+  //         "بلاستيكي",
+  //         "خشبي",
+  //         "حديدي"
+  //       ],
+  //       correctAnswer: 2
+  //     },
+  //     {
+  //       question: "القوة الدافعة الكهربائية EMF المتولدة في الملف الثانوي للمحول تسمى:",
+  //       options: [
+  //         "الجهد الثانوي",
+  //         "الجهد الابتدائي",
+  //         "القدرة الثانوية",
+  //         "التيار الثانوي"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "الجهد الثانوي للمحول يتناسب طرديًا مع:",
+  //       options: [
+  //         "الجهد الابتدائي",
+  //         "عدد لفات الملف الابتدائي",
+  //         "القدرة الثانوية",
+  //         "التيار الثانوي"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "في المحول الرافع يكون التيار الثانوي أقل من التيار الابتدائي.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "في المحول الخافض يكون التيار الابتدائي أقل من التيار الثانوي.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "علل: تستخدم المحولات لعزل دائرة عن أخرى:",
+  //       options: [
+  //         "لأن بسلك اللف الابتدائي لا يتصل بسلك اللف الثانوي",
+  //         "لزيادة المقاومة",
+  //         "لمنع فقدان الطاقة",
+  //         "لزيادة المجال المغناطيسي"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "١) القدرة الكلية المنبعثة من جسم ساخن....... بازياد درجة الحرارة.",
+  //       options: [
+  //         "تقل",
+  //         "لا تتغير",
+  //         "تزداد"
+  //       ],
+  //       correctAnswer: 2
+  //     },
+  //     {
+  //       question: "٢) الأجسام الأسخن تشع قدرة ....... قدرة الأجسام الأبرد.",
+  //       options: [
+  //         "أكبر من",
+  //         "تساوي",
+  //         "أقل من"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "٣) قدرة الموجات الكهرومغناطيسية تتناسب طرديًا مع:",
+  //       options: [
+  //         "T C",
+  //         "T O",
+  //         "T' O",
+  //         "T' C"
+  //       ],
+  //       correctAnswer: 3
+  //     },
+  //     {
+  //       question: "١) تردد العتبة يتغير بتغير نوع الفلز.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "٢) حسب نظرية الموجات الكهرومغناطيسية، المجال الكهربائي يحرر الإلكترونات من السطح.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "١) أسلط كومبتون أشعة X ذات طول موجي معلوم على هدف من:",
+  //       options: [
+  //         "الذهب",
+  //         "الفضة",
+  //         "الجرافيت"
+  //       ],
+  //       correctAnswer: 2
+  //     },
+  //     {
+  //       question: "٢) أشعة X المشتتة في تجارب كومبتون أصبح طولها الموجي ..... الطول الموجي للإشعاع الساقط.",
+  //       options: [
+  //         "أكبر من",
+  //         "يساوي",
+  //         "أصغر من"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "٣) طاقة الفوتون تتناسب عكسيًا مع:",
+  //       options: [
+  //         "سرعته",
+  //         "تردده",
+  //         "طوله الموجي"
+  //       ],
+  //       correctAnswer: 2
+  //     },
+  //     {
+  //       question: "١) طاقة ذرة الهيدروجين قيمتها:",
+  //       options: [
+  //         "أحيانًا موجبة",
+  //         "أحيانًا سالبة",
+  //         "دائمًا موجبة",
+  //         "دائمًا سالبة"
+  //       ],
+  //       correctAnswer: 3
+  //     },
+  //     {
+  //       question: "٢) طاقة ذرة الهيدروجين تعتمد على:",
+  //       options: [
+  //         "n",
+  //         "1/n²",
+  //         "1/n",
+  //         "n²"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "٣) انتقال إلكترون ذرة هيدروجين من مستوى حالة الإثارة إلى المستوى الثالث يعطي:",
+  //       options: [
+  //         "سلسلة باشن",
+  //         "سلسلة بالمر",
+  //         "سلسلة ليمان"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "٤) تعرف مجموعة الخطوط الملونة التي تكون طيف ذرة الهيدروجين بسلسلة:",
+  //       options: [
+  //         "باشن",
+  //         "ليمان",
+  //         "بالمر"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "٥) الضوء المترابط هو:",
+  //       options: [
+  //         "ضوء من مصدرين أو أكثر يولد مجموعة ذات مقدمات منتظمة أو موجات متطابقة عند القمم والقيعان.",
+  //         "ضوء بمقدمات موجية غير متزامنة تضيء الأجسام بضوء أبيض منتظم.",
+  //         "ضوء ناتج عن تفكك ذري في الموجات الكهرومغناطيسية.",
+  //         "ضوء مرئي لا يمكن تمييز طيفه بسهولة."
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "١) القوى النووية القوية هي قوى:",
+  //       options: [
+  //         "تجاذب",
+  //         "تنافر",
+  //         "تجاذب وتنافر"
+  //       ],
+  //       correctAnswer: 2
+  //     },
+  //     {
+  //       question: "٢) حزم الطاقة ذات مستويات الطاقة الدنيا في الذرة تسمى:",
+  //       options: [
+  //         "حزم التوصيل",
+  //         "حزم التكافؤ",
+  //         "فجوة الطاقة"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "٣) الجهاز المستخدم لدراسة طيف الإشعاع الذري هو:",
+  //       options: [
+  //         "مطياف الكتلة",
+  //         "المطياف",
+  //         "المجهر الماسح"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "النموذج الذري يتفق مع قوانين الكهرومغناطيسية.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "في المحول الرافع يكون التيار الثانوي أقل من التيار الابتدائي.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "يوصل الملف الابتدائي للمحول بمصدر جهد ثابت.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "الجرمانيوم حساس جدًا للحرارة في معظم التطبيقات الإلكترونية.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "١) مجموع عدد البروتونات والنيترونات في النواة يسمى:",
+  //       options: [
+  //         "التكافؤ",
+  //         "العدد الذري",
+  //         "العدد الكتلي"
+  //       ],
+  //       correctAnswer: 2
+  //     },
+  //     {
+  //       question: "٢) النشاطية الإشعاعية تتناسب طردياً مع:",
+  //       options: [
+  //         "طاقة الربط النووية",
+  //         "العدد الذري",
+  //         "عمر النصف"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "٣) انتقال إلكترونات ذرة الهيدروجين من حالة الإثارة إلى المستوى الثالث يعطي سلسلة:",
+  //       options: [
+  //         "ليمان",
+  //         "بالمر",
+  //         "رزر فورد"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "٤) موصلية المواد ... عندما تقل فجوة الطاقة بين حزم التوصيل وحزم التكافؤ:",
+  //       options: [
+  //         "تزداد",
+  //         "لا تتغير",
+  //         "تنقص"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "١) ذرات نفس العنصر لها كتل مختلفة ولها الخصائص الكيميائية نفسها تُسمى:",
+  //       options: [
+  //         "أيونات",
+  //         "متعددات الأشكال (تطور النظير)",
+  //         "نظائر"
+  //       ],
+  //       correctAnswer: 2
+  //     },
+  //     {
+  //       question: "٢) من الصعب قياس زخم جسيم وتحديد موقعه بدقة في الوقت نفسه، هذا يُعرف بمبدأ:",
+  //       options: [
+  //         "مبدأ الشك لهايزنبرج",
+  //         "مبدأ التراكب",
+  //         "مبدأ الإنعكاس"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "٣) يستخدم لرفع أو خفض الجهد الكهربي المتناوب:",
+  //       options: [
+  //         "المحول الكهربائي",
+  //         "المحرك الكهربائي",
+  //         "المولد الكهربائي"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "٤) عملية اضمحلال تنبعث فيها جسيم ألفا من النواة تسمى:",
+  //       options: [
+  //         "انبعاث بيتا",
+  //         "انبعاث ألفا",
+  //         "انشطار نووي"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "القدرة المرافقة للتيار المتناوب ثابتة.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "تردد العتبة يتغير بتغير نوع الفلز.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "طيف الأجسام المتوهجة يغطي مدى واسع من الأطوال الموجية.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 0
+  //     },
+  //     {
+  //       question: "يستخدم الدايود في تحويل الجهد المستمر إلى الجهد المتناوب.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 1
+  //     },
+  //     {
+  //       question: "النموذج النووي يتفق مع قوانين الكهرومغناطيسية.",
+  //       options: [
+  //         "✓",
+  //         "X"
+  //       ],
+  //       correctAnswer: 1
+  //     }
+  //   ]
+  // }
+
 ];
 
   useEffect(() => {

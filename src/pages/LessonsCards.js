@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/LessonsCards.css';
 
-const LessonsCards = ({ lessons = [] }) => {
+const LessonsCards = ({ lessons = [ {
+    id: 1,
+    title: "Intro to software & big data ",
+    description: "An introduction to software & big data",
+    videoUrl: "https://youtu.be/QJobLJbCTZ4",
+     pdfUrl: "PDFViewerPage"
+  },] }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterOption, setFilterOption] = useState('all'); 
 
