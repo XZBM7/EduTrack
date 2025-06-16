@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import '../styles/LessonsCards.css';
 
-const LessonsCards = ({ lessons = [ {
-    id: 1,
-    title: "Intro to software & big data ",
-    description: "An introduction to software & big data",
-    videoUrl: "https://youtu.be/QJobLJbCTZ4",
-     pdfUrl: "PDFViewerPage"
-  },] }) => {
+const LessonsCards = ({ lessons = [{
+  id: 1,
+  title: "Intro to software & big data ",
+  description: "An introduction to software & big data",
+  videoUrl: "https://youtu.be/QJobLJbCTZ4",
+  pdfUrl: "pdf/Chapter1_Introduction.pdf" 
+}] }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterOption, setFilterOption] = useState('all'); 
+  const [filterOption, setFilterOption] = useState('all');
 
   const filteredLessons = lessons.filter(lesson => {
-    const matchesSearch = lesson.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         lesson.description.toLowerCase().includes(searchTerm.toLowerCase());
-    
+    const matchesSearch = lesson.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      lesson.description.toLowerCase().includes(searchTerm.toLowerCase());
+
     let matchesFilter = true;
     if (filterOption === 'withVideo') {
       matchesFilter = lesson.videoUrl && lesson.videoUrl !== '#';
@@ -28,7 +28,7 @@ const LessonsCards = ({ lessons = [ {
   return (
     <div className="lessons-container">
       <h1 className="page-title">Educational Courses</h1>
-      
+
       <div className="search-filter-container">
         <div className="search-box">
           <input
@@ -40,7 +40,7 @@ const LessonsCards = ({ lessons = [ {
           />
           <span className="search-icon">🔍</span>
         </div>
-        
+
         <div className="filter-options">
         </div>
       </div>
@@ -70,7 +70,7 @@ const LessonsCards = ({ lessons = [ {
                   <span className="disabled-link">Video Unavailable</span>
                 )}
                 {lesson.pdfUrl && lesson.pdfUrl !== '#' ? (
-                  <a href={lesson.pdfUrl} className="pdf-link" target="_blank" rel="noopener noreferrer">
+                  <a href={lesson.pdfUrl} className="pdf-link" download>
                     Download PDF
                   </a>
                 ) : (

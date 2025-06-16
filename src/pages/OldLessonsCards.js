@@ -99,9 +99,8 @@ const OldLessonsCards = ({ lessons = [
 
   return (
     <div className="lessons-container">
-      <h1 className="page-title">Educational Courses</h1>
+      <h1 className="page-title">Educational Courses Old software - 1</h1>
       
-      {/* Search Bar */}
       <div className="search-container">
         <input
           type="text"
