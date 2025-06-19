@@ -1,4 +1,13 @@
 export const sessionData = [
+   {
+      id: 4,
+      name: "Microservices",
+      time: "8:10 PM",
+      date: "2025-06-22",
+      status: "upcoming",
+      icon: "🧩",
+      liveLink: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2IyY2NlMTMtNTU3OC00NGRkLWFiNzktMWQzNzQxZmE2ZmZj%40thread.v2/0?context=%7b%22Tid%22%3a%22aadc0e0a-65ee-471a-99a1-9f86faecbaed%22%2c%22Oid%22%3a%226dbed4a2-45ee-41d9-9e1b-749db52d04c7%22%7d"
+    },
   {
     id: 1,
     name: "Intro to Software & Big data",
@@ -13,26 +22,18 @@ export const sessionData = [
     name: " Big data & No SQL",
     time: "8:10 pm",
     date: "2025-06-18",
-    status: "upcoming",
-    icon: "✍️",
-    liveLink: "https://teams.live.com/meet/9328248638060?p=qnYqvRZt5cGcpPI9tQ"
+    status: "completed",
+    icon: "🗃️",
+    liveLink: "https://www.youtube.com/watch?v=-hCnACoYQ_M"
    },
-  //   {
-  //     id: 3,
-  //     name: "Team Meeting",
-  //     time: "02:00 PM",
-  //     date: "2023-06-15",
-  //     status: "completed",
-  //     icon: "👥",
-  //     liveLink: "https://stream.example.com/meeting"
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Creative Writing",
-  //     time: "04:45 PM",
-  //     date: "2023-06-15",
-  //     status: "cancelled",
-  //     icon: "✍️",
-  //     liveLink: "https://stream.example.com/writing"
-  //   }
+    {
+      id: 3,
+      name: "Clean code & SOLID",
+      time: "In youtube",
+      date: "2023-06-19",
+      status: "completed",
+      icon: "✍️",
+      liveLink: "https://youtu.be/fax3YVF5Klc"
+    },
+   
 ];

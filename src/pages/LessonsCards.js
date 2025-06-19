@@ -7,7 +7,23 @@ const LessonsCards = ({ lessons = [{
   description: "An introduction to software & big data",
   videoUrl: "https://youtu.be/QJobLJbCTZ4",
   pdfUrl: "pdf/Chapter1_Introduction.pdf" 
-}] }) => {
+},
+{
+ id: 2,
+  title: "Big data & NO SQL ",
+  description: "big data & NO SQL mongo db py ",
+  videoUrl: "https://www.youtube.com/watch?v=-hCnACoYQ_M",
+  pdfUrl: "pdf/Chapter 2 - Big data - No sql.pdf" 
+},
+{
+ id: 3,
+  title: "Clean code & SOLID ",
+  description: "Write clean code and The SOLID role",
+  videoUrl: "https://youtu.be/fax3YVF5Klc",
+  pdfUrl: "pdf/Chapter 3- Clean code & SOLID.pdf" 
+},
+
+] }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterOption, setFilterOption] = useState('all');
 

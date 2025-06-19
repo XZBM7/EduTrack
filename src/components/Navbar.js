@@ -132,10 +132,6 @@ const Navbar = () => {
           <FaHome className="nav-icon" />
           <span>Dashboard</span>
         </Link>
-        <Link to="/CourseCurriculum" className="nav-link">
-          <FaBook className="nav-icon" />
-          <span>Courses</span>
-        </Link>
         <Link to="/SessionDashboard" className="nav-link">
           <FaCalendarAlt className="nav-icon" />
           <span>Calendar</span>
@@ -143,13 +139,13 @@ const Navbar = () => {
         <Link to="/LessonsCards" className="nav-link">
          <FaFileAlt className="nav-icon" />
   <span>Materials</span>
-  <span className="notification-badge">1</span>
+  <span className="notification-badge">3</span>
         </Link>
 
         <Link to="/Assignments" className="nav-link">
           <FaCalendarAlt className="nav-icon" />
           <span>Assignments</span>
-          <span className="notification-badge">3</span>
+          <span className="notification-badge">5</span>
         </Link>
         <Link to="/NewsPage" className="nav-link">
           <FaEnvelope className="nav-icon" />
