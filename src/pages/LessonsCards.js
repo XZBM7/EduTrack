@@ -22,6 +22,14 @@ const LessonsCards = ({ lessons = [{
   videoUrl: "https://youtu.be/fax3YVF5Klc",
   pdfUrl: "pdf/Chapter 3- Clean code & SOLID.pdf" 
 },
+{
+ id: 4,
+  title: "Microservices",
+  description: "Microservices and SOA role",
+  videoUrl: "https://youtu.be/NZFoNf_fdAo",
+  pdfUrl: "pdf/Chapter 4 -  Microservices.pdf" 
+},
+
 
 ] }) => {
   const [searchTerm, setSearchTerm] = useState('');

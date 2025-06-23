@@ -139,13 +139,13 @@ const Navbar = () => {
         <Link to="/LessonsCards" className="nav-link">
          <FaFileAlt className="nav-icon" />
   <span>Materials</span>
-  <span className="notification-badge">3</span>
+  <span className="notification-badge">4</span>
         </Link>
 
         <Link to="/Assignments" className="nav-link">
           <FaCalendarAlt className="nav-icon" />
           <span>Assignments</span>
-          <span className="notification-badge">5</span>
+          <span className="notification-badge">6</span>
         </Link>
         <Link to="/NewsPage" className="nav-link">
           <FaEnvelope className="nav-icon" />

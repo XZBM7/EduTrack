@@ -984,7 +984,166 @@ const Assignments = () => {
           "correctAnswer": 3
         }
       ]
+    },
+
+    {
+      "id": 7,
+      "title": "Microservices Quiz",
+      "description": "Test your understanding of monolithic vs microservices architecture, SOA, and key design principles.",
+      "questions": [
+        {
+          "question": "What best describes a Monolithic Architecture?",
+          "options": ["A set of independent services", "An architecture that scales each module individually", "A tightly integrated application deployed as one unit", "A distributed system"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which of the following is NOT an advantage of monolithic architecture?",
+          "options": ["Simple to develop and test", "Easy to scale individual modules", "Centralized management", "High performance due to internal calls"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is a major risk of using Monolithic Architecture?",
+          "options": ["Service isolation", "Centralized deployment", "Data decentralization", "Independent scaling"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What happens when a small change is made in a monolithic system?",
+          "options": ["Only the changed service is redeployed", "The whole application must be redeployed", "A new server is added", "CI/CD is triggered automatically"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What defines a Microservices Architecture?",
+          "options": ["One large codebase", "A centralized database", "Small, independent services communicating via APIs", "Services running on one server"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which of the following is NOT true about microservices?",
+          "options": ["Each service is tightly coupled", "Each service can be deployed independently", "Services can use different programming languages", "Each service has its own data store"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "What does Microservices Architecture promote?",
+          "options": ["Single language usage", "Team autonomy", "Strong centralized orchestration", "Shared database"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "One key benefit of microservices is:",
+          "options": ["Better testing complexity", "Shared deployment pipeline", "Failure isolation", "Easier data integration"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which component is NOT needed in microservices?",
+          "options": ["Service discovery", "API Gateway", "Enterprise Service Bus (ESB)", "Monitoring tools"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Microservices allow:",
+          "options": ["Centralized data storage", "Language uniformity", "Different tech stacks per service", "Single deployment unit"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Why are microservices good for scaling?",
+          "options": ["Whole system scales at once", "Each service can scale independently", "Scaling requires no load balancer", "Code duplication is minimized"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What helps ensure high availability in microservices?",
+          "options": ["Central database", "Orchestration via ESB", "Service isolation", "SOAP-based communication"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "What enables faster deployments in microservices?",
+          "options": ["Central deployment strategy", "Independent deployable units", "Complex integration", "Shared service testing"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "How do microservices avoid vendor lock-in?",
+          "options": ["Proprietary APIs", "Closed source tools", "Use of open standards", "Single language enforcement"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which platform improves resilience in microservices?",
+          "options": ["DockerHub", "Kubernetes", "Apache Spark", "MySQL"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "A key challenge of microservices is:",
+          "options": ["Small codebase", "Operational simplicity", "System complexity", "Lack of testing"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "What type of testing is harder in microservices?",
+          "options": ["Unit testing", "End-to-end testing", "Static testing", "Load testing"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What causes latency in microservices?",
+          "options": ["Shared memory usage", "Internal function calls", "Network communication", "Local caching"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "What complicates data consistency in microservices?",
+          "options": ["SOAP usage", "Use of a single DB", "Distributed data stores", "One team managing all services"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "API versioning is important in microservices because:",
+          "options": ["It reduces performance", "Services can evolve independently", "All services use one version", "It allows central coordination"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is a core component in SOA but NOT in microservices?",
+          "options": ["Service Discovery", "API Gateway", "Enterprise Service Bus (ESB)", "Independent database"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "SOA commonly uses which protocol?",
+          "options": ["REST", "gRPC", "SOAP", "WebSockets"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "In microservices, services:",
+          "options": ["Are centrally orchestrated", "Rely on ESB", "Are tightly coupled", "Communicate directly via APIs"],
+          "correctAnswer": 3
+        },
+        {
+          "question": "SOA services are usually:",
+          "options": ["Fine-grained", "Coarse to fine-grained", "Stateless only", "Event-based only"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What does 'modeled around business domains' mean?",
+          "options": ["Services follow technical layers", "Services reflect company departments", "Services reuse existing code", "Services must be reused across systems"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Decentralization in microservices refers to:",
+          "options": ["One shared database", "Managing data per service", "Centralized deployment", "Code duplication"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What should each service hide behind APIs?",
+          "options": ["Business logic", "Implementation details", "Team members", "Configuration files"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What helps microservices be 'highly observable'?",
+          "options": ["Fewer services", "Integrated logs and metrics", "One centralized dashboard", "Simplified user interface"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What database pattern is most aligned with microservices?",
+          "options": ["Shared DB per service", "One DB for all services", "Database per Service", "NoSQL only"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "What communication pattern is often used in microservices?",
+          "options": ["SMTP", "RESTful APIs", "SSH", "FTP"],
+          "correctAnswer": 1
+        }
+      ]
     }
+
 
 
 
