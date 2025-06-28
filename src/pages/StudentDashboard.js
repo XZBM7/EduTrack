@@ -17,12 +17,12 @@ const StudentDashboard = () => {
     const fetchStats = async () => {
       setTimeout(() => {
         setStats({
-          totalLectures: 11,
-          completedLectures: 4,
-          remainingLectures: 11,
+          totalLectures: 10,
+          completedLectures: 6,
+          remainingLectures: 4,
           canceledLectures: 0,
-          upcomingLectures: 2,
-          assignmentsDue: 6,
+          upcomingLectures: 3,
+          assignmentsDue: 8,
           assignmentsPending: 0
         });
         setLoading(false);
@@ -74,7 +74,7 @@ const StudentDashboard = () => {
           <div className="stat-content">
             <h3>Upcoming Lectures</h3>
             <p className="stat-value">{stats.upcomingLectures} this week</p>
-            <p className="stat-change">Next:  6/24/2025 &   6/25/2025 </p>
+            <p className="stat-change">Next: 6/29/2025 </p>
           </div>
         </div>
 
@@ -106,8 +106,8 @@ const StudentDashboard = () => {
             </div>
           </div>
           <div className="course-syllabus">
-            <h4>Current Topic: Microservices Patterns - 1</h4>
-            <p>Next: 6/24/2025</p>
+            <h4>Current Topic: UML - OCL</h4>
+            <p>Next: 6/29/2025</p>
           </div>
         </section>
 
@@ -127,7 +127,7 @@ const StudentDashboard = () => {
             </div>
             <div className="material-item">
               <FaTasks className="material-icon" />
-              <span>Assignment 6 active</span>
+              <span>Assignment 8 active</span>
             </div>
           </div>
         </section>

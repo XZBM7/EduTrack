@@ -30,6 +30,22 @@ const LessonsCards = ({ lessons = [{
   pdfUrl: "pdf/Chapter 4 -  Microservices.pdf" 
 },
 
+{
+ id: 5,
+  title: "Microservices pattern - 1",
+  description: "Microservices ",
+  videoUrl: "https://youtu.be/2VvHLfVA7GA",
+  pdfUrl: "pdf/Chapter_5,6_Microservices_Design_Patterns_Communication_Patterns….pdf" 
+},
+
+{
+ id: 6,
+  title: "Microservices  pattern - 2",
+  description: "Microservices ",
+  videoUrl: "https://youtu.be/BMyHmqLwzyI",
+  pdfUrl: "pdf/Chapter_5,6_Microservices_Design_Patterns_Communication_Patterns….pdf" 
+},
+
 
 ] }) => {
   const [searchTerm, setSearchTerm] = useState('');

@@ -1142,7 +1142,224 @@ const Assignments = () => {
           "correctAnswer": 1
         }
       ]
+    } ,
+
+    {
+  "id": 8,
+  "title": " Microservices pattern - 1  Quiz",
+  "description": "Test your understanding of communication patterns, message formats, protocols, and broker-based messaging in microservices.",
+  "questions": [
+    {
+      "question": "What is the main characteristic of the Request/Response communication pattern?",
+      "options": ["Asynchronous", "One-to-Many", "Synchronous", "Fire-and-forget"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which protocol is commonly used with REST APIs?",
+      "options": ["SMTP", "HTTP", "FTP", "WebSocket"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of these technologies is designed for internal high-performance communication?",
+      "options": ["SOAP", "gRPC", "REST", "JSON-RPC"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which format is NOT human-readable?",
+      "options": ["JSON", "XML", "Protocol Buffers", "YAML"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "In a publish/subscribe model, how many services receive a message?",
+      "options": ["One", "Two", "All subscribers", "None"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which communication type is considered fire-and-forget?",
+      "options": ["Request/Response", "One-way Notification", "Async Request/Response", "Publish/Subscribe"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which header allows a reply to be matched with a request in asynchronous messaging?",
+      "options": ["Message ID", "Timestamp", "Correlation ID", "Sender"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which pattern uses a message broker?",
+      "options": ["Brokerless", "REST", "SOAP", "Broker-based"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is one advantage of using a message broker?",
+      "options": ["Increases coupling", "Requires direct connections", "Enables loose coupling", "Decreases availability"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which is NOT an advantage of REST?",
+      "options": ["Stateless", "Simple", "Tight coupling", "Works over HTTP"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the main characteristic of the Request/Response communication pattern?",
+      "options": ["Asynchronous", "One-to-Many", "Synchronous", "Fire-and-forget"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which protocol is commonly used with REST APIs?",
+      "options": ["SMTP", "HTTP", "FTP", "WebSocket"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of these technologies is designed for internal high-performance communication?",
+      "options": ["SOAP", "gRPC", "REST", "JSON-RPC"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which format is NOT human-readable?",
+      "options": ["JSON", "XML", "Protocol Buffers", "YAML"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "In a publish/subscribe model, how many services receive a message?",
+      "options": ["One", "Two", "All subscribers", "None"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which communication type is considered fire-and-forget?",
+      "options": ["Request/Response", "One-way Notification", "Async Request/Response", "Publish/Subscribe"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which header allows a reply to be matched with a request in asynchronous messaging?",
+      "options": ["Message ID", "Timestamp", "Correlation ID", "Sender"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which pattern uses a message broker?",
+      "options": ["Brokerless", "REST", "SOAP", "Broker-based"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is one advantage of using a message broker?",
+      "options": ["Increases coupling", "Requires direct connections", "Enables loose coupling", "Decreases availability"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which is NOT an advantage of REST?",
+      "options": ["Stateless", "Simple", "Tight coupling", "Works over HTTP"],
+      "correctAnswer": 2
     }
+  ]
+} ,
+
+{
+  "id": 9,
+  "title": " Microservices pattern - 2  Quiz",
+  "description": "Evaluate your understanding of CQRS, Event Sourcing, Sagas, API Gateway, and distributed tracing.",
+  "questions": [
+    {
+      "question": "What does CQRS stand for?",
+      "options": ["Common Query Reporting Strategy", "Command Query Responsibility Segregation", "Centralized Query and Response System", "Coordinated Query Rule Setup"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which model in CQRS handles write operations?",
+      "options": ["Command Model", "Query Model", "API Model", "Event Model"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is a key benefit of CQRS?",
+      "options": ["Simpler architecture", "Shared database", "Separation of concerns", "Synchronous messaging"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Event Sourcing stores data as:",
+      "options": ["Snapshots", "SQL Rows", "Sequence of Events", "NoSQL documents"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which is a challenge of Event Sourcing?",
+      "options": ["Lack of traceability", "No audit logs", "Replay performance", "No write model"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does an orchestrator do in a Saga?",
+      "options": ["Processes events", "Executes compensations", "Coordinates the saga steps", "Monitors logs"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which type of saga has no central controller?",
+      "options": ["Orchestration", "Manual", "Choreography", "Synchronous"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "A key tool for distributed tracing is:",
+      "options": ["Postman", "Grafana", "Jaeger", "Prometheus"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the main idea behind the API Gateway pattern?",
+      "options": ["Direct client access to services", "Shared database", "Single entry point for client", "Log collection"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which is NOT a benefit of API Gateway?",
+      "options": ["Authentication", "Centralized logging", "Protocol translation", "Full database access"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What does CQRS stand for?",
+      "options": ["Common Query Reporting Strategy", "Command Query Responsibility Segregation", "Centralized Query and Response System", "Coordinated Query Rule Setup"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which model in CQRS handles write operations?",
+      "options": ["Command Model", "Query Model", "API Model", "Event Model"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is a key benefit of CQRS?",
+      "options": ["Simpler architecture", "Shared database", "Separation of concerns", "Synchronous messaging"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Event Sourcing stores data as:",
+      "options": ["Snapshots", "SQL Rows", "Sequence of Events", "NoSQL documents"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which is a challenge of Event Sourcing?",
+      "options": ["Lack of traceability", "No audit logs", "Replay performance", "No write model"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does an orchestrator do in a Saga?",
+      "options": ["Processes events", "Executes compensations", "Coordinates the saga steps", "Monitors logs"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which type of saga has no central controller?",
+      "options": ["Orchestration", "Manual", "Choreography", "Synchronous"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "A key tool for distributed tracing is:",
+      "options": ["Postman", "Grafana", "Jaeger", "Prometheus"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the main idea behind the API Gateway pattern?",
+      "options": ["Direct client access to services", "Shared database", "Single entry point for client", "Log collection"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which is NOT a benefit of API Gateway?",
+      "options": ["Authentication", "Centralized logging", "Protocol translation", "Full database access"],
+      "correctAnswer": 3
+    }
+  ]
+}
+
 
 
 

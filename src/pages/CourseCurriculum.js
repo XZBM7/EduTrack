@@ -80,12 +80,7 @@ const CourseCurriculum = () => {
         { id: 'lec10', title: "Lecture 10: React.js - Next.js & API Integration" }
       ]
     },
-    {
-      title: "Advanced Topics",
-      lectures: [
-        { id: 'lec11', title: "Lecture 11: Classification & Regression" }
-      ]
-    }
+  
   ];
 
   if (!isLoaded) {
@@ -96,7 +91,7 @@ const CourseCurriculum = () => {
     );
   }
 
-  const totalLectures = 11;
+  const totalLectures = 10;
   const completedCount = completedLectures.length;
   const completionPercentage = Math.round((completedCount / totalLectures) * 100);
 
