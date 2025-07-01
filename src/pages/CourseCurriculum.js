@@ -104,9 +104,9 @@ const CourseCurriculum = () => {
       ]
     },
     {
-      title: "Revigin",
+      title: "Revision",
       lectures: [
-        { id: 'lec10', title: "Lecture 10: Revigin " }
+        { id: 'lec10', title: "Lecture 10: Revision all  " }
       ]
     }
   ];

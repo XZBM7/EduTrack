@@ -68,8 +68,8 @@ const LessonsCards = ({ lessons = [{
 },
 {
  id: 10,
-  title: "Revigin",
-  description: "revigin all coures ",
+  title: "Revision",
+  description: "Revision all coures ",
   videoUrl: "https://drive.google.com/file/d/1z2dYyjsvjZupgbah5MtTY-cWIYrHA5Hy/view?usp=drive_link",
   pdfUrl: "" 
 },

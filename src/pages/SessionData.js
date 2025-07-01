@@ -83,7 +83,7 @@ export const sessionData = [
 },
 {
   id: 10,
-  name: "Revigin",
+  name: "Revision",
   time: "8:10 PM",
   date: "2025-07-1",
   status: "completed",
