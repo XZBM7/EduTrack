@@ -1,13 +1,21 @@
 {
   "files": {
-    "main.css": "/EduTrack/static/css/main.881b7d29.css",
-    "main.js": "/EduTrack/static/js/main.6b5fdde6.js",
+    "main.css": "/EduTrack/static/css/main.cf2b1889.css",
+    "main.js": "/EduTrack/static/js/main.6f6c2d96.js",
+    "static/js/762.9f377c22.chunk.js": "/EduTrack/static/js/762.9f377c22.chunk.js",
+    "static/js/239.ec33ea62.chunk.js": "/EduTrack/static/js/239.ec33ea62.chunk.js",
+    "static/js/977.98ea94de.chunk.js": "/EduTrack/static/js/977.98ea94de.chunk.js",
+    "static/js/455.1e487d7d.chunk.js": "/EduTrack/static/js/455.1e487d7d.chunk.js",
     "index.html": "/EduTrack/index.html",
-    "main.881b7d29.css.map": "/EduTrack/static/css/main.881b7d29.css.map",
-    "main.6b5fdde6.js.map": "/EduTrack/static/js/main.6b5fdde6.js.map"
+    "main.cf2b1889.css.map": "/EduTrack/static/css/main.cf2b1889.css.map",
+    "main.6f6c2d96.js.map": "/EduTrack/static/js/main.6f6c2d96.js.map",
+    "762.9f377c22.chunk.js.map": "/EduTrack/static/js/762.9f377c22.chunk.js.map",
+    "239.ec33ea62.chunk.js.map": "/EduTrack/static/js/239.ec33ea62.chunk.js.map",
+    "977.98ea94de.chunk.js.map": "/EduTrack/static/js/977.98ea94de.chunk.js.map",
+    "455.1e487d7d.chunk.js.map": "/EduTrack/static/js/455.1e487d7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.881b7d29.css",
-    "static/js/main.6b5fdde6.js"
+    "static/css/main.cf2b1889.css",
+    "static/js/main.6f6c2d96.js"
   ]
 }
