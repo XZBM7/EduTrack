@@ -18,11 +18,11 @@ const StudentDashboard = () => {
       setTimeout(() => {
         setStats({
           totalLectures: 10,
-          completedLectures: 6,
-          remainingLectures: 4,
+          completedLectures: 10,
+          remainingLectures: 0,
           canceledLectures: 0,
-          upcomingLectures: 3,
-          assignmentsDue: 8,
+          upcomingLectures: 0,
+          assignmentsDue: 12,
           assignmentsPending: 0
         });
         setLoading(false);
@@ -74,7 +74,7 @@ const StudentDashboard = () => {
           <div className="stat-content">
             <h3>Upcoming Lectures</h3>
             <p className="stat-value">{stats.upcomingLectures} this week</p>
-            <p className="stat-change">Next: 6/29/2025 </p>
+            <p className="stat-change">Next: </p>
           </div>
         </div>
 
@@ -106,8 +106,8 @@ const StudentDashboard = () => {
             </div>
           </div>
           <div className="course-syllabus">
-            <h4>Current Topic: UML - OCL</h4>
-            <p>Next: 6/29/2025</p>
+            <h4>Current Topic:</h4>
+            <p>Next:</p>
           </div>
         </section>
 
@@ -127,7 +127,7 @@ const StudentDashboard = () => {
             </div>
             <div className="material-item">
               <FaTasks className="material-icon" />
-              <span>Assignment 8 active</span>
+              <span>Assignment 12 active</span>
             </div>
           </div>
         </section>

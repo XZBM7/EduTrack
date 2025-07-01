@@ -45,6 +45,34 @@ const LessonsCards = ({ lessons = [{
   videoUrl: "https://youtu.be/BMyHmqLwzyI",
   pdfUrl: "pdf/Chapter_5,6_Microservices_Design_Patterns_Communication_Patterns….pdf" 
 },
+{
+ id: 7,
+  title: "UML + OCL",
+  description: "OCL core ",
+  videoUrl: "",
+  pdfUrl: "pdf/chapter 7- OCL + UML.pdf" 
+},
+{
+ id: 8,
+  title: "OOP + AOP",
+  description: "AOP core ",
+  videoUrl: "https://youtu.be/iWnyBrUv3cI",
+  pdfUrl: "pdf/Chapter 8 - AOP & OOP.pdf" 
+},
+{
+ id: 9,
+  title: "Testing ",
+  description: "Testing software",
+  videoUrl: "https://youtu.be/4ovAwO_i9vg",
+  pdfUrl: "pdf/Chapter 9 - Testing software.pdf" 
+},
+{
+ id: 10,
+  title: "Revigin",
+  description: "revigin all coures ",
+  videoUrl: "https://drive.google.com/file/d/1z2dYyjsvjZupgbah5MtTY-cWIYrHA5Hy/view?usp=drive_link",
+  pdfUrl: "" 
+},
 
 
 ] }) => {

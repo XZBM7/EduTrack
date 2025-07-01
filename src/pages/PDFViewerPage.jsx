@@ -25,6 +25,8 @@ const PDFViewer = () => {
     { name: 'Chapter 7 - OCL + UML', path: 'pdf/chapter 7- OCL + UML.pdf' },
     { name: 'Chapter 8 - AOP & OOP', path: 'pdf/Chapter 8 - AOP & OOP.pdf' },
     { name: 'Chapter 9 - Testing software', path: 'pdf/Chapter 9 - Testing software.pdf' },
+    { name: 'Chapter 10 - React', path: 'pdf/Chapter 10 - React and APIs in Modern Web Development.pdf' },
+
 
   ];
 

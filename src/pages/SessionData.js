@@ -54,5 +54,41 @@ export const sessionData = [
       icon: "🔁",
       liveLink: "https://youtu.be/BMyHmqLwzyI"
     },
-   
+     {
+  id: 7,
+  name: "UML + OCL",
+  time: "8:10 PM",
+  date: "2025-06-27",
+  status: "completed",
+  icon: "📝",
+  liveLink: ""
+},
+{
+  id: 8,
+  name: "OOP + AOP",
+  time: "8:10 PM",
+  date: "2025-06-29",
+  status: "completed",
+  icon: "🧠", 
+  liveLink: "https://youtu.be/iWnyBrUv3cI"
+},
+{
+  id: 9,
+  name: "Testing Software",
+  time: "8:10 PM",
+  date: "2025-06-30",
+  status: "completed",
+  icon: "🧪", 
+  liveLink: "https://youtu.be/4ovAwO_i9vg"
+},
+{
+  id: 10,
+  name: "Revigin",
+  time: "8:10 PM",
+  date: "2025-07-1",
+  status: "completed",
+  icon: "♻️",
+  liveLink: "https://drive.google.com/file/d/1z2dYyjsvjZupgbah5MtTY-cWIYrHA5Hy/view?usp=drive_link"
+}
+
 ];

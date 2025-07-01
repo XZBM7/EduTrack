@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/CourseCurriculum.css';
+import { useNavigate } from 'react-router-dom';
 
 const CourseCurriculum = () => {
   const [completedLectures, setCompletedLectures] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showCertificateForm, setShowCertificateForm] = useState(false);
+  const [fullName, setFullName] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadProgress = () => {
@@ -37,6 +41,12 @@ const CourseCurriculum = () => {
   useEffect(() => {
     if (isLoaded) {
       localStorage.setItem('completedLectures', JSON.stringify(completedLectures));
+      
+      // Check if all lectures are completed
+      const totalLectures = 10;
+      if (completedLectures.length === totalLectures) {
+        setShowCertificateForm(true);
+      }
     }
   }, [completedLectures, isLoaded]);
 
@@ -48,6 +58,20 @@ const CourseCurriculum = () => {
       return newState;
     });
   }, []);
+
+  const handleGenerateCertificate = () => {
+    if (fullName.trim().split(' ').length >= 3) {
+      navigate('/certificate', { 
+        state: { 
+          fullName, 
+          completionDate: new Date().toLocaleDateString(),
+          score: '100%'
+        } 
+      });
+    } else {
+      alert('Please enter your full name (at least 3 names)');
+    }
+  };
 
   const curriculumSections = [
     {
@@ -74,13 +98,17 @@ const CourseCurriculum = () => {
       ]
     },
     {
-      title: "Testing & Frontend Development",
+      title: "Testing ",
       lectures: [
-        { id: 'lec9', title: "Lecture 9: Software Testing (Manual Testing)" },
-        { id: 'lec10', title: "Lecture 10: React.js - Next.js & API Integration" }
+        { id: 'lec9', title: "Lecture 9: Software Testing (Manual Testing & Auto) " },
       ]
     },
-  
+    {
+      title: "Revigin",
+      lectures: [
+        { id: 'lec10', title: "Lecture 10: Revigin " }
+      ]
+    }
   ];
 
   if (!isLoaded) {
@@ -97,6 +125,26 @@ const CourseCurriculum = () => {
 
   return (
     <div className="curriculum-container">
+      {showCertificateForm && (
+        <div className="certificate-modal">
+          <div className="certificate-form">
+            <h2>Congratulations! 🎉</h2>
+            <p>You've completed 100% of the course!</p>
+            <p>Enter your full name to generate your certificate:</p>
+            <input
+              type="text"
+              placeholder="Your Full Name (3 names at least)"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+            />
+            <div className="form-actions">
+              <button onClick={handleGenerateCertificate}>Generate Certificate</button>
+              <button onClick={() => setShowCertificateForm(false)}>Close</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <h1 className="course-title">Software Engineering Master Course</h1>
       <p className="course-description">Complete curriculum with progress tracking</p>
       

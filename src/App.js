@@ -6,12 +6,12 @@ import NewsPage from './pages/NewsPage';
 import ContactPage from './pages/ContactPage';
 import OldLessonsCards from './pages/OldLessonsCards';
 
-
 import StudentDashboard from './pages/StudentDashboard';
 import Assignments from './pages/Assignments';
 import LessonsCards from './pages/LessonsCards';
 import PDFViewerPage from './pages/PDFViewerPage';
 import CourseCurriculum from './pages/CourseCurriculum';
+import Certificate from './pages//Certificate';
 import SessionDashboard from './pages/SessionDashboard';
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
           <Route path="/LessonsCards" element={<LessonsCards />} />
           <Route path="/PDFViewerPage" element={<PDFViewerPage />} />
           <Route path="/CourseCurriculum" element={<CourseCurriculum />} />
+          <Route path="/certificate" element={<Certificate />} />
           <Route path="/SessionDashboard" element={<SessionDashboard />} />
           <Route path="/NewsPage" element={<NewsPage />} />
           <Route path="/ContactPage" element={<ContactPage />} />
@@ -37,6 +38,7 @@ function App() {
       </main>
 
       <Footer />
+      
     </div>
   );
 }

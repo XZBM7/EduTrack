@@ -1358,7 +1358,574 @@ const Assignments = () => {
       "correctAnswer": 3
     }
   ]
+},
+
+{
+  "id": 10,
+  "title": "Modeling and OCL Quiz",
+  "description": "Assess your knowledge of descriptive, predictive, and prescriptive modeling, UML, Model-Driven Engineering (MDE), and Object Constraint Language (OCL).",
+  "questions": [
+    {
+      "question": "Which technique is commonly used in descriptive models?",
+      "options": ["Regression", "Clustering", "Optimization", "Reinforcement Learning"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which model type is used to suggest the best course of action?",
+      "options": ["Descriptive", "Predictive", "Prescriptive", "Analytical"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is a feature of Model-Driven Engineering (MDE)?",
+      "options": ["Focus on low-level coding", "Manual implementation", "Automated code generation", "Platform dependency"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "In MDE, what is the purpose of model transformation?",
+      "options": ["To change code style", "To convert code to models", "To convert one model into another", "To rename classes"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is NOT a benefit of MDE?",
+      "options": ["Platform independence", "Reduced productivity", "Higher abstraction", "Automation"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is UML primarily used for?",
+      "options": ["Writing code", "Modeling object-oriented systems", "Creating databases", "User interface design"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What kind of diagram is used to represent the interaction between actors and the system over time?",
+      "options": ["Class Diagram", "Sequence Diagram", "Package Diagram", "Activity Diagram"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of these is a characteristic of modeling languages?",
+      "options": ["Not standardized", "Domain-specific", "Based on code syntax", "Only textual"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is used for modeling dynamic systems in MATLAB?",
+      "options": ["BPMN", "Archimate", "Simulink", "ERD"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which diagram is best for modeling workflows and business processes?",
+      "options": ["Sequence Diagram", "Activity Diagram", "Use Case Diagram", "Package Diagram"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What does a use case diagram represent?",
+      "options": ["Data structures", "Functional behavior of a system", "Class hierarchy", "System algorithms"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What element in a use case diagram defines the system scope?",
+      "options": ["Actor", "Use Case", "Relationship", "System Boundary"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which element in a class diagram represents inheritance?",
+      "options": ["Multiplicity", "Association", "Generalization", "Activation Bar"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which OCL keyword refers to the current instance of a class?",
+      "options": ["this", "current", "self", "context"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is an OCL constraint type?",
+      "options": ["Iteration", "Condition", "Invariant", "Loop"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What type of data is 'Set(T)' in OCL?",
+      "options": ["Ordered with duplicates", "Ordered without duplicates", "Unordered without duplicates", "None"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which operation is used in OCL to check if a collection contains an element?",
+      "options": ["contains()", "has()", "includes()", "within()"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does 'context Person inv: self.age > 0' ensure?",
+      "options": ["Age must be zero", "Age must be negative", "Age is greater than zero", "Age is undefined"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which OCL operation filters elements based on a condition?",
+      "options": ["collect", "reject", "select", "iterate"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the purpose of '->forAll' in OCL?",
+      "options": ["Applies condition to one item", "Checks for a single element", "Applies condition to all elements", "None"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which language is formally used to define rules in UML models?",
+      "options": ["Java", "SQL", "OCL", "HTML"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which diagram shows package dependencies?",
+      "options": ["Class Diagram", "Use Case Diagram", "Package Diagram", "Activity Diagram"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the purpose of a System Sequence Diagram (SSD)?",
+      "options": ["Define database schema", "Show system and actor interactions", "Describe hardware layout", "Optimize code"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "In UML, what does multiplicity specify?",
+      "options": ["Method parameters", "Number of possible instances", "Return type", "Attribute type"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What type of UML diagram models static structure?",
+      "options": ["Use Case Diagram", "Sequence Diagram", "Class Diagram", "Activity Diagram"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is 'oclIsUndefined()' used for?",
+      "options": ["To define a value", "To perform calculations", "To check if a value is undefined", "To concatenate strings"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which type of OCL collection allows duplicates and has no order?",
+      "options": ["Set", "Sequence", "Bag", "OrderedSet"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What kind of model is used to predict future outcomes?",
+      "options": ["Descriptive", "Predictive", "Prescriptive", "Analytical"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which OCL operation counts how many times an object appears in a collection?",
+      "options": ["count()", "numberOf()", "appears()", "includes()"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which modeling language is best suited for enterprise architecture?",
+      "options": ["BPMN", "Archimate", "UML", "Simulink"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is true about OCL?",
+      "options": ["Procedural", "Graphical", "Declarative", "Event-driven"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does '->notEmpty()' check in OCL?",
+      "options": ["If collection is empty", "If object exists", "If collection has elements", "If condition is false"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which operation is used to apply transformation in MDE?",
+      "options": ["Simulation", "Translation", "Model Transformation", "Conversion"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of these is an example of prescriptive model use?",
+      "options": ["Grouping customers", "Forecasting sales", "Optimizing delivery routes", "Summarizing reports"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What type of constraint is 'context CustomerCard inv: validFrom.isBefore(goodThru)'?",
+      "options": ["Attribute invariant", "Association invariant", "Precondition", "Postcondition"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which diagram shows a high-level structure of grouped elements?",
+      "options": ["Class Diagram", "Package Diagram", "Activity Diagram", "Sequence Diagram"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following represents a general operation defined in OclAny?",
+      "options": ["oclSum()", "oclJoin()", "oclIsTypeOf()", "oclSelect()"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the role of 'PrintedName = owner.title.concat(...)' in OCL?",
+      "options": ["Loop control", "String concatenation", "Data mapping", "Multiplicity rule"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which collection type in OCL is ordered and allows duplicates?",
+      "options": ["Set", "Sequence", "Bag", "OrderedSet"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "In OCL, which operation is used to transform a collection?",
+      "options": ["collect", "reject", "select", "iterate"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the purpose of UML?",
+      "options": ["Writing low-level code", "Building GUI", "Modeling system structure and behavior", "Testing performance"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which modeling language is used to create entity-relationship diagrams?",
+      "options": ["UML", "ERD", "Simulink", "OCL"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which OCL operation checks if at least one element satisfies a condition?",
+      "options": ["exists", "forAll", "iterate", "reject"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which technique is used in predictive models?",
+      "options": ["Regression", "Optimization", "Clustering", "Simulation"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which tool is used for model-to-text transformations?",
+      "options": ["JetBrains MPS", "Papyrus", "Acceleo", "Simulink"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the root type in OCL type hierarchy?",
+      "options": ["Object", "OclAny", "Data", "OclRoot"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What does '->reject()' do in OCL?",
+      "options": ["Filters by true condition", "Removes matching elements", "Duplicates elements", "Orders elements"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which diagram shows system behavior in response to external events?",
+      "options": ["SSD", "Class Diagram", "ER Diagram", "Activity Diagram"],
+      "correctAnswer": 0
+    }
+  ]
+},
+
+{
+  "id": 11,
+  "title": "OOP and AOP Concepts Quiz",
+  "description": "Test your understanding of Object-Oriented Programming (OOP), Aspect-Oriented Programming (AOP), and software concerns.",
+  "questions": [
+    {
+      "question": "Which of the following is NOT a core concept of Object-Oriented Programming (OOP)?",
+      "options": ["Encapsulation", "Abstraction", "Weaving", "Inheritance"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does 'Encapsulation' mean in OOP?",
+      "options": ["Modeling only relevant classes", "Hiding internal details and exposing only what's necessary", "Allowing behavior based on the caller object", "Sharing methods between classes"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Polymorphism in OOP allows:",
+      "options": ["Code duplication", "Methods to behave differently based on object", "Eliminating all classes", "Compiling at runtime"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the output of the Java example where Dog extends Animal and makeSound is called?",
+      "options": ["Woof", "Meow", "Bark!", "Some generic sound..."],
+      "correctAnswer": 2
+    },
+    {
+      "question": "In the Python example with Dog and Cat classes, what OOP concept is being demonstrated?",
+      "options": ["Inheritance only", "Abstraction", "Polymorphism", "Encapsulation"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What are 'concerns' in software engineering?",
+      "options": ["Bugs in the system", "Performance issues only", "Priorities and requirements from stakeholders", "Programming errors"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is an example of a core concern?",
+      "options": ["Logging", "Security", "Payment processing", "Performance monitoring"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which is NOT a type of concern listed in the chapter?",
+      "options": ["Policy Concern", "Quality of Service Concern", "Compatibility Concern", "Organizational Concern"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does 'Separation of Concerns' promote?",
+      "options": ["Coupling", "System-wide logging", "Dividing system features with minimal overlap", "Writing all code in one place"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the main goal of Aspect-Oriented Programming (AOP)?",
+      "options": ["Increase code length", "Model entities", "Separate cross-cutting concerns", "Write procedural code"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following defines a 'Join Point' in AOP?",
+      "options": ["The advice code", "Where aspects are configured", "A point in the program where an aspect is applied", "A return value"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is 'Advice' in AOP?",
+      "options": ["The target method", "The object being created", "Code that executes at a join point", "A configuration file"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which AOP concept determines where and when advice is applied?",
+      "options": ["Aspect", "Weaving", "Pointcut", "Join Point"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is 'Weaving' in AOP?",
+      "options": ["Creating new classes", "Applying aspects to target objects", "Polymorphic binding", "Changing variable names"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which advice runs before the target method is invoked?",
+      "options": ["AfterReturning", "Around", "Before", "AfterThrowing"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which advice is used for cleanup tasks regardless of method outcome?",
+      "options": ["After", "Before", "AfterReturning", "Around"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which advice is only executed if the method throws an exception?",
+      "options": ["Before", "AfterReturning", "AfterThrowing", "Around"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which advice type allows modifying inputs and outputs of methods?",
+      "options": ["Before", "After", "Around", "AfterReturning"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the main benefit of using AOP?",
+      "options": ["Reduces memory", "Duplicates logic", "Improves separation of concerns", "Makes testing harder"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "How does AOP affect code reuse?",
+      "options": ["Reduces it", "Makes it harder", "Enhances it by applying aspects to multiple points", "Forces manual repetition"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "When should you use AOP?",
+      "options": ["When starting new programming language", "When building UI", "When dealing with repetitive logic like logging and security", "For sorting algorithms"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "OOP is most useful when:",
+      "options": ["Handling cross-cutting concerns", "Modeling real-world systems and entities", "Avoiding object creation", "Weaving aspects"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which is a modular unit in AOP?",
+      "options": ["Class", "Object", "Aspect", "Method"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What programming languages support OOP?",
+      "options": ["Only Java", "Only C", "Java, C++, Python", "JavaScript only"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which AOP tool is commonly used in Java?",
+      "options": ["Flask", "React", "Spring AOP", "Angular"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which OOP concept helps hide internal object data?",
+      "options": ["Abstraction", "Inheritance", "Encapsulation", "Polymorphism"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "How does AOP promote loose coupling?",
+      "options": ["By using inheritance", "By duplicating code", "By separating cross-cutting concerns", "By removing classes"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which paradigm is better for logging without modifying business logic?",
+      "options": ["OOP", "AOP", "Procedural", "Functional"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is a non-functional concern?",
+      "options": ["Transaction processing", "Security", "Inventory management", "Order placement"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What happens in 'After Returning' advice?",
+      "options": ["Always runs after the method", "Runs if an exception is thrown", "Runs after a method returns successfully", "Prevents method execution"],
+      "correctAnswer": 2
+    }
+  ]
+},
+
+{
+  "id": 12,
+  "title": "Software Testing and JUnit Quiz",
+  "description": "Evaluate your knowledge of software testing principles, types, and JUnit practices.",
+  "questions": [
+    {
+      "question": "What is the primary purpose of software testing?",
+      "options": ["To write documentation", "To create user interfaces", "To verify the software meets requirements", "To add new features"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is NOT a benefit of software testing?",
+      "options": ["Detect bugs early", "Increase hardware usage", "Improve security", "Save cost in the long term"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why can't testing guarantee 100% bug-free software?",
+      "options": ["Developers are careless", "Not enough testers", "Complex scenarios may be hard to test", "Testing is not needed"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which testing type is best for exploratory and ad-hoc testing?",
+      "options": ["Automated Testing", "Manual Testing", "System Testing", "Performance Testing"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which testing method focuses on inputs and outputs without knowing internal code?",
+      "options": ["White Box Testing", "Gray Box Testing", "Black Box Testing", "Unit Testing"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which level of testing verifies individual components?",
+      "options": ["System Testing", "Unit Testing", "Integration Testing", "Acceptance Testing"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which testing type is done by clients or end-users?",
+      "options": ["Unit Testing", "Integration Testing", "Acceptance Testing", "Smoke Testing"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which JUnit annotation is used to test for exceptions?",
+      "options": ["@Before", "@After", "@Test(expected = ...)", "@Timeout"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the purpose of @Before in JUnit?",
+      "options": ["Runs after each test", "Runs before each test", "Initializes the test report", "Logs errors"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which JUnit method fails if two values are not equal?",
+      "options": ["assertSame", "assertTrue", "assertEquals", "fail"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is a functional testing example?",
+      "options": ["Response time testing", "Login functionality", "Memory usage check", "Compatibility testing"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of these is a non-functional testing type?",
+      "options": ["Unit Testing", "Security Testing", "Smoke Testing", "Regression Testing"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which tool is used for API testing?",
+      "options": ["JUnit", "TestNG", "Postman", "Selenium"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What type of testing involves running tests while the software is running?",
+      "options": ["Static Testing", "Code Review", "Dynamic Testing", "Documentation Testing"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which testing type is best for testing old features after an update?",
+      "options": ["Load Testing", "Smoke Testing", "Regression Testing", "Gray Box Testing"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "In the bug life cycle, what comes after a bug is fixed?",
+      "options": ["Closed", "Assigned", "Retested", "New"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of these is NOT a QA documentation type?",
+      "options": ["Bug Reports", "Traceability Matrix", "Database Schema", "Test Summary Report"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which test case would check how a system reacts to empty inputs?",
+      "options": ["Valid Login", "Load Test", "Empty Fields Test", "Security Test"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "In TDD, what is written first?",
+      "options": ["UI code", "Working feature", "Test", "Deployment script"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which testing method is most suitable for performance and load testing?",
+      "options": ["Manual Testing", "Ad-hoc Testing", "Automated Testing", "Usability Testing"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which JUnit assertion checks if a value is null?",
+      "options": ["assertEquals", "assertSame", "assertNull", "assertNotSame"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "When should manual testing be preferred?",
+      "options": ["For repetitive regression tests", "When UI is rapidly changing", "For large-scale performance", "In CI/CD pipelines"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is a disadvantage of manual testing?",
+      "options": ["Suitable for usability", "Flexible with changes", "Time-consuming for large tests", "Does not require tools"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which type of testing checks if the major functions of a system work?",
+      "options": ["Regression Testing", "Smoke Testing", "Unit Testing", "Gray Box Testing"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "In Agile, QA contributes to:",
+      "options": ["DevOps infrastructure", "Scrum ceremonies and user story acceptance", "Only code reviews", "Only deployment"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the purpose of shift-left testing?",
+      "options": ["Postponing tests", "Performing tests earlier in the cycle", "Moving code left", "Documenting bugs only"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which test verifies that updates don't break existing features?",
+      "options": ["Performance Test", "Smoke Test", "Regression Test", "Functional Test"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Who typically performs acceptance testing?",
+      "options": ["Developer", "QA Analyst", "Client or End User", "Scrum Master"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which JUnit annotation runs once before all test methods?",
+      "options": ["@Before", "@BeforeClass", "@Test", "@Init"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which type of testing checks internal paths and logic of code?",
+      "options": ["Black Box", "Gray Box", "White Box", "UI Testing"],
+      "correctAnswer": 2
+    }
+  ]
 }
+
+
+
 
 
 

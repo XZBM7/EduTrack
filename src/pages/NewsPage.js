@@ -9,7 +9,7 @@ const NewsPage = () => {
       content: "The course will start from 2025-06-15 to 2025-07-15, with 3 sessions per week, held online or offline via YouTube",
       date: "2025-5-31",
       author: "XZ",
-      isImportant: true,
+      isImportant: false,
       category: "announcement"
     },
      {
@@ -30,18 +30,18 @@ const NewsPage = () => {
 https://forms.gle/EwLNUKRJwzneMJyd6`,
   date: "2025-06-10",
   author: "XZ",
-  isImportant: true,
+  isImportant: false,
   category: "general"
 },
-    // {
-    //   id: 3,
-    //   title: "New Library Hours",
-    //   content: "Starting next week, the library will extend its opening hours until 10 PM on weekdays.",
-    //   date: "2023-08-10",
-    //   author: "Library Services",
-    //   isImportant: false,
-    //   category: "general"
-    // }
+    {
+      id: 3,
+      title: "الكورس خلص تقدر تاخد شهادتك",
+      content: "تقدر تاخد شهادتك دلوقتي وتتفرج على كل المحتوى مسجل وتحل عليه عشان تثبت المعلومه ",
+      date: "2025-07-1",
+      author: "XZ",
+      isImportant: true,
+      category: "general"
+    }
   ]);
 
   const [searchTerm, setSearchTerm] = useState('');
